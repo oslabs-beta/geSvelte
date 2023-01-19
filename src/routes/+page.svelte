@@ -6,12 +6,9 @@
 	import { browser } from '$app/environment';
 </script>
 
-<Header />
-
 <main>
+	<Header />
 	<slot />
-	<Quiz />
+
 	<!-- This is where the content of the page will be rendered -->
 </main>
-
-<Footer />
