@@ -1,36 +1,38 @@
-<p align="center">
-  <img src="static/sveltekit-electron.svg" />
-</p>
+# create-svelte
 
-# Sveltekit + Electron
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-Minimal [Sveltekit](https://github.com/sveltejs/kit#readme) + [Electron](https://www.electronjs.org/) starter template.
+## Creating a project
 
-<br />
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Getting Started
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-Unfortunately you must use `npm` as there are issues that arise when using `pnpm` or `yarn`
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-|         |                                             |
-| ------- | ------------------------------------------- |
-| Clone   | · `npx degit fractalhq/sveltekit-electron ` |
-| Install | · `npm install`                             |
-| Develop | · `npm run dev`                             |
-| Build   | · `npm run build`                           |
+## Developing
 
-In order to eliminate vulnerabilities caused by electron itself, please run `npm update` and `npm audit fix`. This will apply overrides.
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-<br />
+```bash
+npm run dev
 
-<p align="center">
-  <img src="screenshot.png" />
-</p>
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-## Recommended IDE Setup
+## Building
 
-[VSCode](https://code.visualstudio.com/) + [Svelte for VSCode](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+To create a production version of your app:
 
-## Change Build Targets
+```bash
+npm run build
+```
 
-In the scripts section of package.json you can update the `build:electron` command and change the flags to set the targets, by default it uses `-mwl` which is Mac, Windows, and Linux
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

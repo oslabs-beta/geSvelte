@@ -1,14 +1,2 @@
-<script lang="ts">
-	import Header from '$lib/Header.svelte';
-	import Footer from '$lib/Footer.svelte';
-	import Quiz from '$lib/Quiz.svelte';
-	import '../styles.css';
-	import { browser } from '$app/environment';
-</script>
-
-<main>
-	<Header />
-	<slot />
-
-	<!-- This is where the content of the page will be rendered -->
-</main>
+<h1>Welcome to SvelteKit</h1>
+<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
