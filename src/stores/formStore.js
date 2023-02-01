@@ -8,7 +8,7 @@ export const loginFormStore = writable({
 	},
 	password: {
 		placeholder: 'pw sdklfgj',
-		label: 'pw Username',
+		label: 'store Password',
 		color: 'blue'
 	}
 });
