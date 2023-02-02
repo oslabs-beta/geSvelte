@@ -2,10 +2,10 @@
   import { loginFormStore } from '../../stores/formStore';
   import Login from './Login.svelte';
 
-  // <style/style> tags in strings will throw a weird error, we can get around this by
+  // <style/script> tags in strings will throw a weird error, we can get around this by
   // using a variable with the string 'style' inside of <> in a template literal
-  const styleStr = 'style'
-  const scriptStr = 'script'
+  const styleStr = 'style';
+  const scriptStr = 'script';
 
   let testStyle = `button {
 		width: 25%;
@@ -25,7 +25,7 @@
 
 </script>
 
-<code>
+<code id="code-mirror">
   {`<${scriptStr}>
     <\/${scriptStr}>
     <div class="form-wrapper">
@@ -37,7 +37,8 @@
             placeholder="${$loginFormStore.username.placeholder}"
             name="username"
             type="text"
-            required \/>
+            required
+          \/>
         <\/label>
         <label>
           ${$loginFormStore.password.label}

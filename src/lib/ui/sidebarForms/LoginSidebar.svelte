@@ -2,7 +2,7 @@
 	import { loginFormStore } from '../../../stores/formStore';
 
 	const submitUpdate = () => {
-		console.log('submitted');
+		console.log(document.getElementById('code-mirror')?.innerHTML);
 		// $loginFormStore.username =
 	};
 
