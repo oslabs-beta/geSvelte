@@ -1,11 +1,13 @@
 <script>
 	import Login from '$lib/components/Login.svelte';
+	import CodeLogin from '$lib/components/CodeLogin.svelte';
 	import Sidebar from '$lib/ui/Sidebar.svelte';
 </script>
 
 <body>
 	<Sidebar />
 	<Login />
+	<CodeLogin />
 </body>
 
 <style lang="scss">

@@ -1,5 +1,5 @@
 <script>
-	// crseate a form
+	// create a form
 	import { loginFormStore } from '../../stores/formStore';
 </script>
 
@@ -31,6 +31,7 @@
 <style lang="scss">
 	button {
 		width: 25%;
+		min-width: fit-content;
 	}
 
 	button:hover {

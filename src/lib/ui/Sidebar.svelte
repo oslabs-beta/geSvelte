@@ -2,10 +2,10 @@
 	import LoginSidebar from '$lib/ui/sidebarForms/LoginSidebar.svelte';
 </script>
 
-<div id="sidebar-wrapper">
+<aside id="sidebar-wrapper">
 	<h1>Sidebar</h1>
 	<LoginSidebar />
-</div>
+</aside>
 
 <style>
 	#sidebar-wrapper {
