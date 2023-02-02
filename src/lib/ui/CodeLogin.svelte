@@ -1,6 +1,6 @@
 <script>
   import { loginFormStore } from '../../stores/formStore';
-  import Login from './Login.svelte';
+  import Login from '$lib/components/Login.svelte';
 
   // <style/script> tags in strings will throw a weird error, we can get around this by
   // using a variable with the string 'style' inside of <> in a template literal
