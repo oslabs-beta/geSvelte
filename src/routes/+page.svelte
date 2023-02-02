@@ -1,14 +1,11 @@
 <script lang="ts">
-	import Header from '$lib/Header.svelte';
-	import Footer from '$lib/Footer.svelte';
-	import Quiz from '$lib/Quiz.svelte';
-	import '../styles.css';
-	import { browser } from '$app/environment';
+	import Login from '$lib/components/Login.svelte';
 </script>
 
-<main>
-	<Header />
-	<slot />
+<header>
+	<h3><a href="/about">About</a></h3>
+	<h3><a href="/createForm">Create a form</a></h3>
+</header>
 
-	<!-- This is where the content of the page will be rendered -->
-</main>
+<style lang="scss">
+</style>
