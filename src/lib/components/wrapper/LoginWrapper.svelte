@@ -1,6 +1,6 @@
 <script>
   import Input from "$lib/components/base/Input.svelte";
-  export const styleClass = 'dummy';
+  export let styleClass = 'dummy';
 
   const baseClasses = `gesvelte-form-wrapper ${styleClass}`;
 
