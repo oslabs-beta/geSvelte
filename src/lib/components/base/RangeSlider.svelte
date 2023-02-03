@@ -23,7 +23,7 @@
 			type="range"
 			{id}
 			{name}
-			class="range-slider-input full-width height-1 {bgColor}"
+			class="range-slider-input full-width height-2 {bgColor}"
 			aria-label={label}
 			{min}
 			{max}
