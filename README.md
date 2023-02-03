@@ -1,5 +1,7 @@
 # geSvelte
 
+<a name="readme-top"></a>
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -23,6 +25,8 @@
 ## About The Project
 
 ### Built With
+
+- [![Svelte][Svelte.dev]][Svelte-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -55,3 +59,9 @@
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<!-- Library oof badges -->
+
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[Svelte-url]: https://svelte.dev/
