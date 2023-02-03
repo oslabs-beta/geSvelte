@@ -26,7 +26,9 @@
 
 ### Built With
 
-- [![Svelte][Svelte.dev]][Svelte-url]
+[![Svelte][Svelte.dev]][Svelte-url]
+
+<!-- Typescript/Javascript, Vite, SvelteKit, Scss -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -47,11 +49,17 @@
 ## Contributors
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-|  Christian Ashley | [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Enixun) |       [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-z-ashley/)       |
-| Johnny Howell |   [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jh1551)   |       [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/john-howell-73a2b833/)       |
-| Stefan Jordan |  [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sjordan2010)   |   [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stefan-jordan-3a466054)   |
-| Ksenia Salova |  [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ksslv)  | [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ksenia-s/) |
-| Umair Shafiq |  [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mooselamb)  | [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](hhttps://www.linkedin.com/in/umair-shafiq-69a419261/) |
+
+|   |   |   |
+|---|---|---|
+| Christian Ashley  | [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Enixun)  | [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-z-ashley/)  |
+| Johnny Howell  | [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jh1551)  | [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/john-howell-73a2b833/)  |
+| Stefan Jordan  | [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sjordan2010)  | [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/stefan-jordan-3a466054)  |
+| Ksenia Salova  | [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ksslv)  |  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ksenia-s/) |
+| Umair Shafiq  | [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mooselamb)   |  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](hhttps://www.linkedin.com/in/umair-shafiq-69a419261/) |
+
+
+
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
