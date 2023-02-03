@@ -11,8 +11,4 @@
 </body>
 
 <style lang="scss">
-	body {
-		display: flex;
-		flex-direction: row;
-	}
 </style>
