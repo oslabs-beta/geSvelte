@@ -26,7 +26,8 @@
 
 ### Built With
 
-- [![Svelte][Svelte.dev]][Svelte-url]
+[![Svelte][Svelte.dev]][Svelte-url]  
+[![Vite][Vite.js]][Vite-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,3 +66,5 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
 [Svelte-url]: https://svelte.dev/
+[Vite.js]: https://vitejs.dev
+[Vite-url]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
