@@ -1,5 +1,5 @@
-<script>
-  export let type='button', value='default', className='gesvelte-default';
+<script lang="ts">
+  export let type: 'button' | 'submit' | 'reset' = 'button', value = 'default', className = 'gesvelte-btn';
 </script>
 
-<input class={className} {type} {value}>
+<button class={className} {type} {value}>{value}</button>
