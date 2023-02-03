@@ -456,16 +456,24 @@ body {
 	color: #fff;
 	letter-spacing: 0.08rem;
 }
-button {
+button.gesvelte-btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-weight: 600;
 	border-radius: 0.4rem;
-	background: #da3bcd;
-	color: #fff;
-	padding: 1rem 2rem;
+	background: #fff;
+	color: #da3bcd;
 	text-shadow: 3px 3px 4px rgba(84, 84, 84, 0.34);
+}
+.gesvelte-btn.btn-sm {
+	padding: 1rem 2rem;
+}
+.gesvelte-btn.btn-lg {
+	padding: 2rem 4rem;
+}
+.gesvelte-btn.btn-xlg {
+	padding: 2rem 4rem;
 }
 /*
 h1 - 2xl
