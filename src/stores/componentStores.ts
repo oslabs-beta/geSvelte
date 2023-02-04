@@ -10,3 +10,7 @@ export const componentStore = writable({
   console.log('componentStore got a subscriber');
   return () => console.log('componentStore has no more subscribers')
 })
+
+export const radioTestStore = writable({
+  fields: []
+});
