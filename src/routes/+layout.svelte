@@ -4,7 +4,7 @@
 	import SlidingPanel from '$lib/components/SlidingPanel.svelte';
 	import '../lib/assets/styles.css';
 	import { flyoutStore } from '$lib/flyoutPanel';
-	import type { FlyoutSettings } from '$lib/components/types';
+	import type { FlyoutSettings } from '$lib/types';
 
 	function trigger() {
 		const el: FlyoutSettings = { id: '555', open: true };

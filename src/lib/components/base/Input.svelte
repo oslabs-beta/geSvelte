@@ -1,9 +1,10 @@
 <script>
-
+//@ts-nocheck
   // base components will be in a form wrapper, enforce inheritance
-  export let props;
+  // export let props;
+  export let  labelClass, labelText, inputType, inputId, inputName;
   // label for property will always match name/id
-  const { labelClass, labelText, inputType, inputId, inputName } = props;
+  // const { labelClass, labelText, inputType, inputId, inputName } = props;
 
 </script>
 

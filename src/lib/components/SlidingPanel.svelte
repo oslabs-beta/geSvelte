@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
 	import { flyoutStore } from '$lib/flyoutPanel';
-	import type { FlyoutSettings } from '$lib/components/types';
+	import type { FlyoutSettings } from '$lib/types';
 	export let id: string;
 
 	flyoutStore.subscribe((settings) => {

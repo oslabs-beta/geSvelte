@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import type { FlyoutSettings } from './components/types';
+import type { FlyoutSettings } from './types';
 
 function flyoutService() {
 	const { subscribe, set, update } = writable<FlyoutSettings>({});
