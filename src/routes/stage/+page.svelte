@@ -6,8 +6,10 @@
   import Button from "$lib/components/base/Button.svelte";
   // import { componentStore } from "../../stores/componentStores";
   import { radioTestStore, checkboxTestStore } from "$lib/stores/componentStores";
+  import { customForm } from "$lib/stores/componentStores";
 	import { onMount, setContext } from "svelte";
   import { writable } from "svelte/store";
+	import { element } from "svelte/internal";
 
   let testSubmit;
   let testRadio;
@@ -53,4 +55,13 @@
       <button type="submit">Add Radio</button>
     </form>
   </div>
+</div>
+
+<div>
+  <!-- {Object.keys($customForm)} -->
+  {#each Object.values($customForm) as element}
+    <svelte:component this={element.type} fields={element.fields} />
+  {/each}
+  <button class="gesvelte-btn" on:click={() => customForm.addRadio()}>Add Radio</button>
+  <button class="gesvelte-btn" on:click={() => customForm.addCheckbox()}>Add Checkbox</button>
 </div>
