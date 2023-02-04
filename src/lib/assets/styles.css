@@ -477,6 +477,9 @@ button.gesvelte-btn {
 .gesvelte-btn.btn-xlg {
 	padding: 2rem 4rem;
 }
+
+
+
 /*
 h1 - 2xl
 h2 - xl
@@ -490,13 +493,21 @@ lg 1024px
 xl 1280px
 2xl 1536px
 */
+form {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
 
+/* Radio */
 input[type='radio'] {
 	--webkit-appearance: none;
 	height: 2.2rem;
 	width: 2.2rem;
 	border-radius: 50%;
 }
+
 
 input[type='text'],
 input[type='email'],
