@@ -225,7 +225,7 @@ body {
 	height: 100vh;
 	background-color: #00dbde;
 	background-image: linear-gradient(323deg, #00dbde 0%, #fc00ff 100%);
-	font-family: 'Montserrat';
+	font-family: 'Fira Sans';
 }
 .container {
 	width: 100%;
@@ -457,20 +457,36 @@ body {
 	letter-spacing: 0.08rem;
 }
 button.gesvelte-btn {
+	font-family: 'Fira Sans';
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-weight: 600;
-	border-radius: 0.4rem;
-	background: #fff;
-	color: #da3bcd;
-	text-shadow: 3px 3px 4px rgba(84, 84, 84, 0.34);
+	font-weight: bold;
+	border-radius: 0.6rem;
+	background: #da3bcd;
+	color: #fff;
+	padding: 1.5rem 2.5rem;
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	border: 1px solid transparent;
+	transition: all 0.2s ease;
+}
+.gesvelte-btn.btn-hover:hover {
+	background: transparent;
+	border-color: #fff;
+	color: #fff;
+}
+.gesvelte-btn.rounded {
+	border-radius: 4rem;
+	width: 25rem;
 }
 .gesvelte-btn.btn-sm {
 	padding: 1rem 2rem;
 }
 .gesvelte-btn.btn-lg {
-	padding: 2rem 4rem;
+	font-size: 1.8rem;
+	padding: 1.8rem 5rem;
 }
 .gesvelte-btn.btn-xlg {
 	padding: 2rem 4rem;
@@ -507,6 +523,30 @@ input[type='tel'] {
 	margin-bottom: 2rem;
 }
 
+.flyout-panel {
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.85);
+	color: #fff;
+	width: 300px;
+	box-shadow: -4px 1px 17px 4px rgba(0, 0, 0, 0.14);
+	-webkit-box-shadow: -4px 1px 17px 4px rgba(0, 0, 0, 0.14);
+	-moz-box-shadow: -4px 1px 17px 4px rgba(0, 0, 0, 0.14);
+}
+.flyout-panel span {
+	position: absolute;
+	top: 0.5rem;
+	left: 1.5rem;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 1.5rem;
+}
+.flyout-panel span:hover {
+	cursor: pointer;
+	color: rgba(255, 255, 255, 0.75);
+}
 @media (min-width: 1536px) {
 	.container {
 		max-width: 640px;
