@@ -421,6 +421,13 @@ body {
 }
 .range-slider-value {
 }
+
+.gesvelte-form-panel {
+	padding:40px;
+	background: #f6f6f6;
+	border-radius: .6rem;
+	border: 1px solid rgba(0,0,0,.15);
+}
 /*
 h1 - 2xl
 h2 - xl
