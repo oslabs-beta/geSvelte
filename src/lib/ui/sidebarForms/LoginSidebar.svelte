@@ -1,5 +1,5 @@
 <script>
-	import { loginFormStore } from '../../../stores/formStore';
+	import { loginFormStore } from '$lib/stores/formStore';
 
 	const submitUpdate = () => {
 		console.log(document.getElementById('code-mirror')?.innerHTML);

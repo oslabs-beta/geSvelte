@@ -1,6 +1,6 @@
 <script>
 	// create a form
-	import { loginFormStore } from '../../stores/formStore';
+	import { loginFormStore } from '$lib/stores/formStore';
 </script>
 
 <div class="form-wrapper">

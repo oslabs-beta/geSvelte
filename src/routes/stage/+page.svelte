@@ -5,24 +5,9 @@
   import Checkbox from "$lib/components/base/Checkbox.svelte";
   import Button from "$lib/components/base/Button.svelte";
   // import { componentStore } from "../../stores/componentStores";
-  import { radioTestStore } from "../../stores/componentStores";
+  import { radioTestStore, checkboxTestStore } from "$lib/stores/componentStores";
 	import { onMount, setContext } from "svelte";
   import { writable } from "svelte/store";
-
-  let checkboxTestStore = writable({
-    fields: [{value: 'One default', checked: true}]
-  }, () => {
-    console.log('checkbox store subscribed!')
-    return () => console.log('checkbox store unsubscribed!')
-  });
-
-  // let radioTestStore = writable({
-  //   fields: [
-  //     { value: "option1", label: "Option 1" },
-  //     { value: "option2", label: "Option 2" },
-  //     { value: "option3", label: "Option 3" }
-  //   ]
-  // });
 
   let testSubmit;
   let testRadio;
