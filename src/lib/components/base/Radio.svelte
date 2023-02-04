@@ -1,16 +1,23 @@
 <script>
-// @ts-nocheck
+  // @ts-nocheck
+	import { onMount } from "svelte";
+
+
 
   // fields will be an array of strings representing options
-  let styleClass;
+  export let styleClass = "gesvelte-default";
 
-  const fields = [
+  export let fields = [
     { value: "option1", label: "Option 1" },
     { value: "option2", label: "Option 2" },
     { value: "option3", label: "Option 3" }
   ];
 
-  let selected = fields[0].value;
+  let selected;
+
+  onMount(() => {
+    selected = fields[0].value;
+  });
 </script>
 
 <fieldset class="radio-group {styleClass}">
