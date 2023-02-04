@@ -1,5 +1,5 @@
 <script>
-  import { loginFormStore } from '../../stores/formStore';
+  import { loginFormStore } from '$lib/stores/formStore';
   import Login from '$lib/components/Login.svelte';
 
   // <style/script> tags in strings will throw a weird error, we can get around this by

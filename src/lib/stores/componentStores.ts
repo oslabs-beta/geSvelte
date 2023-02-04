@@ -14,3 +14,7 @@ export const componentStore = writable({
 export const radioTestStore = writable({
   fields: []
 });
+
+export const checkboxTestStore = writable({
+  fields: []
+});
