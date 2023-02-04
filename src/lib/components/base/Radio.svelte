@@ -14,15 +14,14 @@
   ];
 
   let selected;
+  if (fields.length) selected = fields[0].value;
 
-  onMount(() => {
-    selected = fields[0].value;
-  });
 </script>
 
 <fieldset class="radio-group {styleClass}">
   {#each fields as field}
+  <label for={field.label}>
     <input type="radio" bind:group={selected} id={field.label} name={field.label} value={field.value}>
-    <label for={field.label}>{field.label}</label>
+    <span>{field.label}</span></label>
   {/each}
 </fieldset>
