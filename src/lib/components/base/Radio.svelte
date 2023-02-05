@@ -1,12 +1,16 @@
+<!--
+  Radio.svelte
+  Base level component representing a radio inputs using HTML5 inputs
+  params: 
+    styleClass: classes used with atomic CSS selectors
+    fields [{value, label}]: value of the field and state of box at creation TODO: type/interface for object representing fields
+    ...
+-->
+
 <script>
   // @ts-nocheck
-	import { onMount } from "svelte";
 
-
-
-  // fields will be an array of strings representing options
   export let styleClass = "gesvelte-default";
-
   export let fields = [
     { value: "option1", label: "Option 1" },
     { value: "option2", label: "Option 2" },
