@@ -7,17 +7,17 @@
     ...
 -->
 
-<script>
-  // @ts-nocheck
+<script lang="ts">
+  import type { LabelValue } from "$lib/types";
 
-  export let styleClass = "gesvelte-default";
-  export let fields = [
+  export let styleClass: string = "gesvelte-default";
+  export let fields: LabelValue[] = [
     { value: "option1", label: "Option 1" },
     { value: "option2", label: "Option 2" },
     { value: "option3", label: "Option 3" }
   ];
 
-  let selected;
+  let selected: string | null | undefined;
   if (fields.length) selected = fields[0].value;
 
 </script>

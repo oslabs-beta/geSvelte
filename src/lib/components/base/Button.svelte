@@ -8,7 +8,11 @@
 -->
 
 <script lang="ts">
-  export let type: 'button' | 'submit' | 'reset' = 'button', value = 'default', className = 'gesvelte-btn';
+  import type { ButtonProps } from "$lib/types";
+
+  export let type: ButtonProps["type"] = 'button';
+  export let value: string = 'default';
+  export let className: ButtonProps["className"] = 'gesvelte-btn';
 </script>
 
 <button class={className} {type} {value}>{value}</button>

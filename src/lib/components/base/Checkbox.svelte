@@ -7,8 +7,10 @@
 -->
 
 <script lang="ts">
-  export let fields = [{ value: 'test', checked: false}];
-  export let name = 'default';
+  import type { CheckboxField } from "$lib/types";
+
+  export let fields: CheckboxField[] = [{ value: 'test', checked: false}];
+  export let name: string = 'default';
 
   let checked: any[] = [];
 </script>
