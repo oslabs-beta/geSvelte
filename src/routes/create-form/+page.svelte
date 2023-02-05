@@ -14,6 +14,6 @@
  <Panel>
 	<Input labelClass="test" labelText={"Hello"} inputType={"text"} inputId={1} inputName={"Hello"} />
  </Panel>	
-
+<!-- 
 <style lang="scss">
-</style>
+</style> -->

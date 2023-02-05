@@ -12,13 +12,13 @@ export const componentStore = writable({
   return () => console.log('componentStore has no more subscribers')
 })
 
-export const radioTestStore = writable({
-  fields: []
-});
+// export const radioTestStore = writable({
+//   fields: []
+// });
 
-export const checkboxTestStore = writable({
-  fields: []
-});
+// export const checkboxTestStore = writable({
+//   fields: []
+// });
 
 function createCustomForm() {
   let id = 0;

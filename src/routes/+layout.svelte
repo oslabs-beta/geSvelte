@@ -2,7 +2,7 @@
 	import Header from '$lib/ui/Header.svelte';
 	import RangeSlider from '$lib/components/base/RangeSlider.svelte';
 	import SlidingPanel from '$lib/components/SlidingPanel.svelte';
-	import '../lib/assets/styles.css';
+	import '$lib/assets/styles.css';
 	import { flyoutStore } from '$lib/flyoutPanel';
 	import type { FlyoutSettings } from '$lib/types';
 
