@@ -38,7 +38,8 @@ function createCustomForm() {
           component: base[type],
           type,
           props: {
-            fields: []
+            id: type + Math.floor(Math.random() * 10000),
+            fields: [{value: 'working', checked: true, label: 'should be'}]
           }
         }
       }))
