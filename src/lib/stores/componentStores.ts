@@ -28,7 +28,13 @@ function createCustomForm() {
           type,
           props: {
             id: type + Math.floor(Math.random() * 10000),
-            fields: [{value: 'working', checked: true, label: 'should be'}]
+            name: type + Math.floor(Math.random() * 10000),
+            fields: [
+              {value: 'working1', checked: true, label: 'should be1'},
+              {value: 'working2', checked: true, label: 'should be2'},
+              {value: 'working3', checked: true, label: 'should be3'},
+            ],
+            legend: "These are some test directions:"
           }
         }
       }))
