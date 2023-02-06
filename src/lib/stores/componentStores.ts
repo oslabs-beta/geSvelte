@@ -14,19 +14,8 @@ export const componentStore = writable({
   return () => console.log('componentStore has no more subscribers')
 })
 
-// function labelValueField () : void {
-//   this.field = [];
-// }
-
-// export const radioTestStore = writable({
-//   fields: []
-// });
-
-// export const checkboxTestStore = writable({
-//   fields: []
-// });
-
 function createCustomForm() {
+  // TODO: generate more 
   let id = 0;
   const { subscribe, set, update } = writable({});
 

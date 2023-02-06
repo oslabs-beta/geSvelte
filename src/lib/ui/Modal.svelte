@@ -1,26 +1,13 @@
 <script>
-  import { customForm } from "$lib/stores/componentStores";
-
-  // $: console.log(JSON.stringify($customForm))
+  import CodeView from "$lib/ui/CodeView.svelte";
 </script>
 
 <div id="stage-modal">
   <slot />
-  <code>
-    {'<form>\n'}
-      {#each Object.values($customForm) as component}
-        {`\t<${component.type} id="${component.props.id}" fields={${JSON.stringify(component.props.fields)}} />\n`}
-      {/each}
-    {'</form>'}
-  </code>
+  <CodeView />
 </div>
 
 <style>
-  code {
-    text-align: left;
-    white-space: pre-wrap;
-    min-width: fit-content;
-  }
   #stage-modal {
     background-color: aqua;
     border-radius: 2rem;
