@@ -1,6 +1,7 @@
 <script>
 //@ts-nocheck
   import { customForm } from "$lib/stores/componentStores";
+	import CodeView from "$lib/ui/CodeView.svelte";
 	import Modal from "$lib/ui/Modal.svelte";
   
 </script>
@@ -26,5 +27,6 @@
     </form>
   </div>
   <div class="container col-2">
+    <CodeView />
   </div>
 </div>
