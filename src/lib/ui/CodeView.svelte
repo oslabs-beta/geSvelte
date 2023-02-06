@@ -5,7 +5,7 @@
 <code>
   {'<form>\n'}
     {#each Object.values($customForm) as component}
-      {`\t<${component.type} fields={${JSON.stringify(component.fields)}} />\n`}
+      {`\t<${component.type} fields={${JSON.stringify(component.props.fields)}} />\n`}
     {/each}
   {'</form>'}
 </code>
