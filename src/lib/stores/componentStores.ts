@@ -1,5 +1,7 @@
 import { writable } from "svelte/store";
-import * as base from '$lib/components/base'
+import * as base from '$lib/components/base';
+import type { LabelValue } from "$lib/types";
+// import type { BaseComponents } from "$lib/types";
 
 const fields: string[] = [];
 /**
@@ -11,6 +13,10 @@ export const componentStore = writable({
   console.log('componentStore got a subscriber');
   return () => console.log('componentStore has no more subscribers')
 })
+
+// function labelValueField () : void {
+//   this.field = [];
+// }
 
 // export const radioTestStore = writable({
 //   fields: []
@@ -26,21 +32,35 @@ function createCustomForm() {
 
   return {
     subscribe,
-    addRadio: () => {
-      update((previousState) => Object.assign({}, previousState, { [id++] : { 
-        type: base.Radio,
-        fields: [{value: 'option1', label: 'Option 1'}, {value: 'option2', label: 'Option 2'}] 
-      }}))
-      console.log('added radio')
-      // return base.Radio;
+    addField: (type: 'Radio' | 'Checkbox') : void => {
+      update(previousState => Object.assign({}, previousState, {
+        [id++] : {
+          component: base[type],
+          type,
+          props: {
+            fields: []
+          }
+        }
+      }))
     },
-    addCheckbox: () => {
+    addRadio: (type: 'Radio', fields: LabelValue[]) : void => {
       update((previousState) => Object.assign({}, previousState, { [id++] : { 
-        type: base.Checkbox,
-        fields: [{value: 'test1', checked: true}, {value: 'test2', checked: false}] 
+        component: base[type],
+        type,
+        fields
       }}))
-      console.log('added Checkbox')
-      // return base.Radio;
+    },
+    addCheckbox: (type: 'Checkbox') : void => {
+      update((previousState) => (Object.assign({}, previousState, { 
+            [id++] : { 
+              component: base[type],
+              type,
+              fields: [
+                {value: 'test1', checked: false},
+                {value: 'test2', checked: false},
+              ] 
+            }
+      })));
     }
   }
 }

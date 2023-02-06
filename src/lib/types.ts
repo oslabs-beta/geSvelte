@@ -18,3 +18,5 @@ export type LabelValue = {
 	value: string | null | undefined;
 	label: string;
 }
+
+export type Checked = LabelValue & { checked: boolean }
