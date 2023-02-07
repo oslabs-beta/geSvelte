@@ -7,6 +7,8 @@
   export let visible: Writable<boolean>;
   export let lookup: Writable<number>;
 
+  // let currentField = $customForm[$lookup];
+
   const closeModal = () => {
     $visible = false;
   };
@@ -15,6 +17,12 @@
     console.log('edit')
   }
 
+  // $: if ($customForm[$lookup]) {
+  //   console.log(JSON.stringify($customForm[$lookup].props))
+  // }
+
+
+// fields = [ {val: }, {}, {}  ]
 </script>
 
 {#if $visible}
@@ -24,29 +32,37 @@
     <button class="gesvelte-btn" type="button" on:click={editModal}>Edit</button>
   </div>
   <slot />
-  <!-- <p>{JSON.stringify($customForm[$lookup])}</p> -->
   <h2>TYPE: {$customForm[$lookup].type}</h2>
   {#each Object.keys($customForm[$lookup].props) as prop}
     {#if prop === 'fields'}
-    <h4>{prop.toUpperCase()}: {JSON.stringify($customForm[$lookup].props[prop])}</h4>
+      <h4>{prop.toUpperCase()}: </h4>
+        {#each Object.keys($customForm[$lookup].props.fields) as field}
+          <p>{field}</p>
+          <!-- <p>{JSON.stringify(Object.entries($customForm[$lookup].props.fields))}</p> -->
+          <!-- {#each Object.values($customForm[$lookup].props.fields[field]) as inputParam}
+            <h5>{inputParam[0]}</h5> -->
+            <!-- <input type="text" bind:value={$customForm[$lookup].props.fields[inputParam]} /> -->
+          <!-- {/each} -->
+          {#each Object.entries($customForm[$lookup].props.fields[field]) as component}
+            <p>{component[0]}</p>
+            <input type="text" bind:value={$customForm[$lookup].props.fields[field][component[0]]} />
+          {/each}
+        {/each}
     {:else}
-    <h4>{prop.toUpperCase()}: {$customForm[$lookup].props[prop]}</h4>
+      <h4>
+        {prop.toUpperCase()}:
+        <input type="text" bind:value={$customForm[$lookup].props[prop]} />
+      </h4>
     {/if}
   {/each}
-  <!-- {#each $customForm[$lookup].props.fields as field}
-    <p>{JSON.stringify(field)}</p>
-  {/each} -->
-  <!-- <h4>ID: {$customForm[$lookup].props.id}</h4>
-  <h4>NAME: {$customForm[$lookup].props.name}</h4>
-  <h4>FIELDS: </h4>
-  <h4>LEGEND: {$customForm[$lookup].props.legend}</h4> -->
-  <!-- <CodeView /> -->
+
 </div>
 {/if}
 
 <style>
   #stage-modal {
-    background-color: rgba(97, 97, 97, 0.8);
+    background-color: gray;
+    color: black;
     padding: 15px;
     border-radius: .5rem;
     left: 50%;
@@ -54,7 +70,7 @@
     width: 50%;
     height: 50%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     overflow-x: scroll;
   }
 </style>
