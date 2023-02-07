@@ -7,6 +7,7 @@
 	flyoutStore.subscribe((settings) => {
 		if (settings.open === false) return;
 	});
+
 	function close() {
 		const el: FlyoutSettings = { id, open: true };
 		console.log('Open');
