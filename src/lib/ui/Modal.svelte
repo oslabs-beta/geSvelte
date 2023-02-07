@@ -7,6 +7,8 @@
   export let visible: Writable<boolean>;
   export let lookup: Writable<number>;
 
+  // let currentField = $customForm[$lookup];
+
   const closeModal = () => {
     $visible = false;
   };
@@ -15,6 +17,8 @@
     console.log('edit')
   }
 
+
+// fields = [ {val: }, {}, {}  ]
 </script>
 
 {#if $visible}
@@ -24,11 +28,18 @@
     <button class="gesvelte-btn" type="button" on:click={editModal}>Edit</button>
   </div>
   <slot />
-  <!-- <p>{JSON.stringify($customForm[$lookup])}</p> -->
   <h2>TYPE: {$customForm[$lookup].type}</h2>
   {#each Object.keys($customForm[$lookup].props) as prop}
     {#if prop === 'fields'}
-      <h4>{prop.toUpperCase()}: {JSON.stringify($customForm[$lookup].props[prop])}</h4>
+      <h4>{prop.toUpperCase()}: </h4>
+        <!-- {#each $customForm[$lookup].props.fields as field} -->
+          <!-- <p>{JSON.stringify(field)}</p> -->
+          <!-- <p>{JSON.stringify(Object.entries($customForm[$lookup].props.fields))}</p> -->
+          <!-- {#each Object.entries(field) as inputParam}
+            <h5>{inputParam[0]}</h5>
+            <input type="text" bind:value={$customForm[$lookup].props.fields[inputParam[1]]} />
+          {/each} -->
+        <!-- {/each} -->
     {:else}
       <h4>
         {prop.toUpperCase()}:
@@ -42,7 +53,8 @@
 
 <style>
   #stage-modal {
-    background-color: rgba(97, 97, 97, 0.8);
+    background-color: gray;
+    color: black;
     padding: 15px;
     border-radius: .5rem;
     left: 50%;
