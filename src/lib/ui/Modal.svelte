@@ -25,22 +25,18 @@
   </div>
   <slot />
   <!-- <p>{JSON.stringify($customForm[$lookup])}</p> -->
-  <h2>TYPE: {$customForm[$lookup].type}</h2>
+  <h2 on:click={editModal}>TYPE: {$customForm[$lookup].type}</h2>
   {#each Object.keys($customForm[$lookup].props) as prop}
     {#if prop === 'fields'}
-    <h4>{prop.toUpperCase()}: {JSON.stringify($customForm[$lookup].props[prop])}</h4>
+      <h4 on:click={editModal}>{prop.toUpperCase()}: {JSON.stringify($customForm[$lookup].props[prop])}</h4>
     {:else}
-    <h4>{prop.toUpperCase()}: {$customForm[$lookup].props[prop]}</h4>
+      <h4 on:click={editModal}>
+        {prop.toUpperCase()}:
+        <input type="text" bind:value={$customForm[$lookup].props[prop]} />
+      </h4>
     {/if}
   {/each}
-  <!-- {#each $customForm[$lookup].props.fields as field}
-    <p>{JSON.stringify(field)}</p>
-  {/each} -->
-  <!-- <h4>ID: {$customForm[$lookup].props.id}</h4>
-  <h4>NAME: {$customForm[$lookup].props.name}</h4>
-  <h4>FIELDS: </h4>
-  <h4>LEGEND: {$customForm[$lookup].props.legend}</h4> -->
-  <!-- <CodeView /> -->
+
 </div>
 {/if}
 
@@ -54,7 +50,7 @@
     width: 50%;
     height: 50%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     overflow-x: scroll;
   }
 </style>
