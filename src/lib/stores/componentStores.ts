@@ -15,18 +15,20 @@ export const componentStore = writable({
 })
 
 function createCustomForm() {
-  // TODO: generate more 
+  // TODO: a better system to create unique IDs
   let id = 0;
   const { subscribe, set, update } = writable({});
 
   return {
     subscribe,
+    // TODO: update function to accept a parameter of props (provided by helper form)
     addField: (type: 'Radio' | 'Checkbox') : void => {
       update(previousState => Object.assign({}, previousState, {
         [id++] : {
           component: base[type],
           type,
           props: {
+            // TODO: Use generated ID to assist with name/ID
             id: type + Math.floor(Math.random() * 10000),
             name: type + Math.floor(Math.random() * 10000),
             fields: [

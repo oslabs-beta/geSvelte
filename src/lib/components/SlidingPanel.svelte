@@ -15,7 +15,7 @@
 </script>
 
 {#if $flyoutStore.open === true}
-	<div {id} class="flyout-panel flex flex-column" transition:fly={{ x: 100, duration: 1000 }}>
+	<div {id} class="flyout-panel flex flex-column half-width" transition:fly={{ x: 100, duration: 1000 }}>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<span class="close" on:click={() => close()}>X</span>
 		<slot />
