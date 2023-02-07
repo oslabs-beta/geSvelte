@@ -23,7 +23,7 @@
 </Modal> -->
 
 <SlidingPanel id="556">
-  <div class="ges-row">
+  <div class="ges-row justify-around">
     <button class="gesvelte-btn" on:click={() => customForm.addField('Checkbox')}>Add Checkbox</button>
     <button class="gesvelte-btn" on:click={() => customForm.addField('Radio')}>Add Radio</button>
     <PropsForm />
