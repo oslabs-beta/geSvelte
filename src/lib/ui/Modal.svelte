@@ -25,12 +25,12 @@
   </div>
   <slot />
   <!-- <p>{JSON.stringify($customForm[$lookup])}</p> -->
-  <h2 on:click={editModal}>TYPE: {$customForm[$lookup].type}</h2>
+  <h2>TYPE: {$customForm[$lookup].type}</h2>
   {#each Object.keys($customForm[$lookup].props) as prop}
     {#if prop === 'fields'}
-      <h4 on:click={editModal}>{prop.toUpperCase()}: {JSON.stringify($customForm[$lookup].props[prop])}</h4>
+      <h4>{prop.toUpperCase()}: {JSON.stringify($customForm[$lookup].props[prop])}</h4>
     {:else}
-      <h4 on:click={editModal}>
+      <h4>
         {prop.toUpperCase()}:
         <input type="text" bind:value={$customForm[$lookup].props[prop]} />
       </h4>
