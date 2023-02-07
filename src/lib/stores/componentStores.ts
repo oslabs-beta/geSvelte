@@ -1,5 +1,7 @@
 import { writable } from "svelte/store";
-import * as base from '$lib/components/base'
+import * as base from '$lib/components/base';
+import type { LabelValue } from "$lib/types";
+// import type { BaseComponents } from "$lib/types";
 
 const fields: string[] = [];
 /**
@@ -12,35 +14,51 @@ export const componentStore = writable({
   return () => console.log('componentStore has no more subscribers')
 })
 
-export const radioTestStore = writable({
-  fields: []
-});
-
-export const checkboxTestStore = writable({
-  fields: []
-});
-
 function createCustomForm() {
+  // TODO: a better system to create unique IDs
   let id = 0;
   const { subscribe, set, update } = writable({});
 
   return {
     subscribe,
-    addRadio: () => {
-      update((previousState) => Object.assign({}, previousState, { [id++] : { 
-        type: base.Radio,
-        fields: [{value: 'option1', label: 'Option 1'}, {value: 'option2', label: 'Option 2'}] 
-      }}))
-      console.log('added radio')
-      // return base.Radio;
+    // TODO: update function to accept a parameter of props (provided by helper form)
+    addField: (type: 'Radio' | 'Checkbox') : void => {
+      update(previousState => Object.assign({}, previousState, {
+        [id++] : {
+          component: base[type],
+          type,
+          props: {
+            // TODO: Use generated ID to assist with name/ID
+            id: type + Math.floor(Math.random() * 10000),
+            name: type + Math.floor(Math.random() * 10000),
+            fields: [
+              {value: 'working1', checked: true, label: 'should be1'},
+              {value: 'working2', checked: true, label: 'should be2'},
+              {value: 'working3', checked: true, label: 'should be3'},
+            ],
+            legend: "These are some test directions:"
+          }
+        }
+      }))
     },
-    addCheckbox: () => {
+    addRadio: (type: 'Radio', fields: LabelValue[]) : void => {
       update((previousState) => Object.assign({}, previousState, { [id++] : { 
-        type: base.Checkbox,
-        fields: [{value: 'test1', checked: true}, {value: 'test2', checked: false}] 
+        component: base[type],
+        type,
+        fields
       }}))
-      console.log('added Checkbox')
-      // return base.Radio;
+    },
+    addCheckbox: (type: 'Checkbox') : void => {
+      update((previousState) => (Object.assign({}, previousState, { 
+            [id++] : { 
+              component: base[type],
+              type,
+              fields: [
+                {value: 'test1', checked: false},
+                {value: 'test2', checked: false},
+              ] 
+            }
+      })));
     }
   }
 }

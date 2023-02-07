@@ -1,16 +1,15 @@
-<script>
-	// @ts-nocheck
+<script lang="ts">
 
-	export let name;
-	export let id = 'range-slider-aaaa';
-	export let value = 0;
-	export let min = 0;
-	export let max = 100;
-	export let step = 1;
-	export let bgColor = 'bg-accent';
+	export let name: string;
+	export let id: string = 'range-slider-aaaa';
+	export let value: number = 0;
+	export let min: number = 0;
+	export let max: number = 100;
+	export let step: number = 1;
+	export let bgColor: string = 'bg-accent';
 	// Props (a11y)
 	/** A semantic ARIA label. */
-	export let label = '';
+	export let label: string = '';
 </script>
 
 <div class="range-slider ml2">

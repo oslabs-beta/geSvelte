@@ -1,5 +1,5 @@
 /**
- * Export libary of base components to be used in Wrapper
+ * Export libary of base components to be used in Wrappers/Builder functions
  */
 
 import Input from './Input.svelte';
