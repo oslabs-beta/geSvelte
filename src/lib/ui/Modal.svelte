@@ -1,15 +1,33 @@
-<script>
+<script lang="ts">
   import CodeView from "$lib/ui/CodeView.svelte";
+  import { fade } from "svelte/transition";
+  import { customForm } from "$lib/stores/componentStores";
+	import type { Writable } from "svelte/store";
+
+  export let visible: Writable<boolean>;
+  export let lookup: Writable<number>;
+
+  const closeModal = () => {
+    $visible = false;
+  };
+
 </script>
 
-<div id="stage-modal">
+{#if $visible}
+<div transition:fade id="stage-modal">
+  <button class="gesvelte-btn" type="button" on:click={closeModal}>Close</button>
   <slot />
-  <CodeView />
+  <!-- <p>{JSON.stringify($customForm[$lookup])}</p> -->
+  {#each $customForm[$lookup].props.fields as field}
+    <p>{JSON.stringify(field)}</p>
+  {/each}
+  <!-- <CodeView /> -->
 </div>
+{/if}
 
 <style>
   #stage-modal {
-    background-color: aqua;
+    background-color: black;
     border-radius: 2rem;
     left: 50%;
     transform: translateX(-50%);
