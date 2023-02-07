@@ -91,6 +91,7 @@
 		</div>
 	</section>
 </div>
+<slot />
 
 <style lang="scss">
 	.header-toolbar {
