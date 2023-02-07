@@ -6,9 +6,9 @@
   let visible: Writable<boolean> = writable(false);
   let id: Writable<number> = writable();
 
-  const showProps = (id: number) => {
+  const showProps = (newId: number) => {
     $visible = true;
-    $id = id;
+    $id = newId;
   };
   
 </script>

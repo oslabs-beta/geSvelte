@@ -156,12 +156,12 @@
 		transform: translateX(-50%);
 		transition: all 0.2s ease;
 	}
-	.big-logo {
-		position: absolute;
-		top: 10%;
-		left: 50%;
-		transform: translateX(-50%);
-	}
+	// .big-logo {
+	// 	position: absolute;
+	// 	top: 10%;
+	// 	left: 50%;
+	// 	transform: translateX(-50%);
+	// }
 
 	.feature-box {
 		display: flex;
