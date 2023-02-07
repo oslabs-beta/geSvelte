@@ -223,16 +223,18 @@ video {
 }
 body {
 	height: 100vh;
-	background-color: #00dbde;
-	background-image: linear-gradient(323deg, #00dbde 0%, #fc00ff 100%);
+	width: 100vw;
+	font-size: 1.3rem;
 	font-family: 'Fira Sans';
+	margin: 0;
 }
 .container {
 	width: 100%;
 }
-.row {
+.ges-row {
 	display: flex;
-	max-width: 1536px;
+	flex-direction: row;
+	width: 100%;
 }
 
 .accordion-title {
@@ -248,15 +250,22 @@ body {
 .flex {
 	display: flex;
 }
+.flex-inline {
+	display: inline-flex;
+}
+.flex-auto {
+	flex: 1 1 auto;
+}
+.flex-items-center {
+	align-items: center;
+}
 .justify-center {
 	justify-content: center;
 }
 .justify-between {
 	justify-content: space-between;
-	justify-content: space-between;
 }
 .justify-start {
-	justify-content: flex-start;
 	justify-content: flex-start;
 }
 .direction-row {
@@ -274,11 +283,26 @@ body {
 .grid {
 	display: grid;
 }
-
+.pos-rel {
+	position: relative;
+}
+.pos-abs {
+	position: absolute;
+}
+.hide-overflow {
+	overflow: hidden;
+}
+.text-center {
+	text-align: center;
+}
 .ges-row {
 	max-width: 150.36rem;
 	margin: 0 auto;
 	padding: 0 4rem;
+}
+.col {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 .col-1 {
 	width: 100%;
@@ -298,11 +322,42 @@ body {
 .col-6 {
 	width: 16.66%;
 }
-
+.col-one-fourth {
+	width: 25%;
+}
+.col-three-fourths {
+	width: 75%;
+}
+.col-one-third {
+	width: 33%;
+}
+.col-two-thirds {
+	width: 66.66%;
+}
+.col-one-fifth {
+	width: 20%;
+}
+.col-two-fifths {
+	width: 40%;
+}
+.col-three-fifths {
+	width: 60%;
+}
+.col-four-fifths {
+	width: 80%;
+}
+/*Sometimes we want to hide a DOM element but still want it in the DOM */
+.element-0 {
+	height: 0px;
+	width: 0px;
+}
 .ges-row {
 	max-width: 150.36rem;
 	margin: 0 auto;
-	padding: 0 4rem;
+	padding: 4rem;
+}
+.col {
+	gap: 3rem;
 }
 .col-1 {
 	width: 100%;
@@ -339,6 +394,9 @@ body {
 .width-5 {
 	height: 5rem;
 }
+.width-20 {
+	width: 20rem;
+}
 .half-width {
 	width: 50%;
 }
@@ -347,6 +405,9 @@ body {
 }
 
 /*Height*/
+.height-100 {
+	height: 100%;
+}
 .height-1 {
 	height: 1rem;
 }
@@ -401,9 +462,31 @@ body {
 .mb3 {
 	margin-bottom: 1.5rem;
 }
-/*Padding*/
+.mb4 {
+	margin-bottom: 2rem;
+}
+/*Padding Top and Bottom*/
+.pt1 {
+	padding-top: 0.5rem;
+}
+.pt2 {
+	padding-top: 1rem;
+}
+.pt3 {
+	padding-top: 1.5rem;
+}
+.pt4 {
+	padding-top: 2rem;
+}
+.pb2 {
+	padding-bottom: 1rem;
+}
+.pb3 {
+	padding-bottom: 1.5rem;
+}
+/*Padding Left and Right*/
 .p-all1 {
-	padding: 0.5rem;
+	padding: 0.25rem;
 }
 .p-all2 {
 	padding: 1rem;
@@ -413,6 +496,32 @@ body {
 }
 .p-all4 {
 	padding: 2rem;
+}
+.p-all5 {
+	padding: 2.5rem;
+}
+.p-all6 {
+	padding: 3rem;
+}
+.p-all7 {
+	padding: 3.5rem;
+}
+.p-all8 {
+	padding: 4rem;
+}
+.p-all9 {
+	padding: 4.5rem;
+}
+.p-all10 {
+	padding: 5rem;
+}
+.py80 {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.py50 {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 }
 .pl1 {
 	padding-left: 0.5rem;
@@ -432,6 +541,36 @@ body {
 .pr3 {
 	padding-right: 1.5rem;
 }
+.plr2 {
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+.rounded-sm {
+	border-radius: 0.4rem;
+}
+.rounded-med {
+	border-radius: 1rem;
+}
+.rounded-lg {
+	border-radius: 2.5rem;
+}
+.round {
+	border-radius: 50%;
+}
+
+/* Typography */
+.text-med {
+	font-size: 1.6rem;
+}
+.text-lg {
+	font-weight: 2rem;
+}
+.text-bold {
+	font-weight: 700;
+}
+.text-semibold {
+	font-weight: 600;
+}
 
 /*Color Styling*/
 .bg-default {
@@ -439,6 +578,16 @@ body {
 }
 .bg-accent {
 	background-color: rgb(252, 50, 239);
+}
+
+h1 {
+	font-size: 2.8rem;
+}
+h2 {
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 2rem;
 }
 
 /*Elements*/
@@ -452,7 +601,7 @@ body {
 
 /* Header */
 .main-header {
-	padding: 4rem;
+	width: 100vw;
 	padding: 4rem;
 }
 .site-logo {
@@ -550,13 +699,17 @@ button.gesvelte-btn {
 	color: #da3bcd;
 	padding: 1.5rem 2.5rem;
 	margin-bottom: 2rem;
-	text-shadow: 3px 3px 4px rgba(84, 84, 84, 0.34);
+	text-shadow: 1px 1px 1px rgba(84, 84, 84, 0.25);
+	outline: 0px solid transparent;
+}
+button.gesvelte-btn:focus {
+	outline: 0px solid transparent;
 }
 .gesvelte-btn.btn-sm {
 	padding: 1rem 2rem;
 }
 .gesvelte-btn.btn-lg {
-	padding: 2rem 4rem;
+	padding: 1.3rem 4rem;
 }
 .gesvelte-btn.btn-xlg {
 	padding: 2rem 4rem;
@@ -599,6 +752,7 @@ input[type='tel'] {
 	padding: 12px;
 	font-size: 1.4rem;
 	margin-bottom: 2rem;
+	transition: all 0.2s ease;
 }
 
 input[type='radio'] {
@@ -618,19 +772,36 @@ input[type='tel'] {
 	font-size: 1.4rem;
 	margin-bottom: 2rem;
 }
-
+.radio-bar {
+	margin-bottom: 2rem;
+	background: rgba(255, 255, 255, 0.7);
+}
+.radio-item label {
+	margin: 0;
+}
+.radio-bar {
+	border-radius: 20rem !important;
+}
+.radio-item label {
+	background: transparent;
+	border-radius: 999px;
+}
+label.active {
+	background: rgb(252, 50, 239);
+}
 .flyout-panel {
 	position: fixed;
 	overflow: hidden;
 	top: 0;
 	right: 0;
 	height: 100vh;
-	background: rgba(0, 0, 0, 0.85);
 	color: #fff;
 	width: 300px;
-	box-shadow: -4px 1px 17px 4px rgba(0, 0, 0, 0.14);
-	-webkit-box-shadow: -4px 1px 17px 4px rgba(0, 0, 0, 0.14);
-	-moz-box-shadow: -4px 1px 17px 4px rgba(0, 0, 0, 0.14);
+	background: rgba(255, 255, 255, 0.72);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(6.5px);
+	-webkit-backdrop-filter: blur(5.9px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .flyout-panel span {
 	position: absolute;
@@ -643,19 +814,19 @@ input[type='tel'] {
 	cursor: pointer;
 	color: rgba(255, 255, 255, 0.75);
 }
-@media (min-width: 1536px) {
+/* @media (min-width: 1536px) {
 	.container {
-		max-width: 640px;
+		max-width: 1536px;
 	}
 }
 @media (min-width: 1280px) {
 	.container {
-		max-width: 640px;
+		max-width: 1280px;
 	}
 }
 @media (min-width: 1024px) {
 	.container {
-		max-width: 640px;
+		max-width: 1024px;
 	}
 }
 @media (min-width: 768px) {
@@ -668,4 +839,4 @@ input[type='tel'] {
 	.container {
 		max-width: 640px;
 	}
-}
+} */

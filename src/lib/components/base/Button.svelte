@@ -15,4 +15,4 @@
   export let className: ButtonProps["className"] = 'gesvelte-btn';
 </script>
 
-<button class={className} {type} {value}>{value}</button>
+<button class="gesvelte-btn {className}" {type} {value}>{value}</button>

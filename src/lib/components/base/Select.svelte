@@ -9,6 +9,7 @@
   let selected = options[0].value;
   let name: string | null | undefined;
   let id: string | null | undefined;
+	let placeholder;
 
   function handleSelection(event: Event) {
     const target = event.target as HTMLSelectElement;
@@ -16,8 +17,18 @@
   }
 </script>
 
-<select id={id} name={name} bind:value={selected} on:change={handleSelection}>
-  {#each options as option}
-    <option value={option.value}>{option.label}</option>
-  {/each}
-</select>
+<div class="gesvelte-select-container mb2">
+	<select
+		class="flex pt3 pb3 width-20"
+		{id}
+		{name}
+		{placeholder}
+		{selected}
+		bind:value={selected}
+		on:change={handleSelection}
+	>
+		{#each options as option}
+			<option value={option.value}>{option.label}</option>
+		{/each}
+	</select>
+</div>

@@ -22,6 +22,7 @@
   let selected: string | null | undefined;
   if (fields.length) selected = fields[0].value;
 
+	// $: checked = current === group;
 </script>
 
 <fieldset class="radio-group {styleClass}">
