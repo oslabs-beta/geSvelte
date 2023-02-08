@@ -25,11 +25,22 @@ function createCustomForm() {
         return updatedState;
       })
     },
+    addInput: (id: number, newInput: any) : void => {
+      update(previousState => {
+        const lookup = id as unknown as keyof typeof updatedState;
+        const updatedState = Object.assign({}, previousState);
+
+        updatedState[lookup].props.fields.push(newInput);
+
+        return updatedState;
+      })
+    },
     deleteField: (id: number) : void => {
       update(previousState => {
         const updatedState = Object.assign({}, previousState);
         // TODO: properly cast the type of id
         delete updatedState[id as unknown as keyof typeof updatedState];
+        
         return updatedState;
       })
     },
@@ -37,7 +48,7 @@ function createCustomForm() {
   }
 }
 
-const defaultProps = {
+export const defaultProps = {
   'Radio': {
     legend: 'Write your directions here.',
     fields: [
