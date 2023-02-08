@@ -8,14 +8,16 @@
     ...
 -->
 
-<script>
-	//@ts-nocheck
-	// base components will be in a form wrapper, enforce inheritance
-	// export let props;
-	export let placeholder, labelClass, labelText, inputType, id, name;
-	// label for property will always match name/id
-	// const { labelClass, labelText, inputType, inputId, inputName } = props;
+<script lang="ts">
+  import type { textInputs } from "$lib/types";
+
+	export let placeholder: string = 'Default placeholder';
+  export let labelClass: string = ''; 
+  export let labelText: string = 'Default label'; 
+  export let inputType: textInputs = 'text';
+  export let id: number = -1;
+  export let name: string = '';
 </script>
 
 <label class={labelClass} for={name}>{labelText}</label>
-<input type={inputType} id={id} name={name} {placeholder} />
+<input type={inputType} id={`${id}`} name={name} {placeholder} />
