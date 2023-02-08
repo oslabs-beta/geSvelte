@@ -228,7 +228,7 @@
 		z-index: 10;
 		bottom: 20%;
 		left: 50%;
-		height: 80rem;
+		height: 65vh;
 		transform: translateX(-50%);
 		transition: all 0.2s ease;
 	}
@@ -267,4 +267,18 @@
 		color: rgba(255, 255, 255, 0.6);
 		border: 3px solid rgba(97, 20, 108, 0.5);
 	}
+
+	@media (min-width: 1024px) {
+        .mockup {
+        bottom: 30%;
+        height: 60vh;
+    }
+    .hero-text {
+        top: 10vh;
+    
+        h1 {
+            font-size: 6rem;
+        }
+    }
+}
 </style>
