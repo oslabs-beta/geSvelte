@@ -1,5 +1,4 @@
 <script lang="ts">
-  import CodeView from "$lib/ui/CodeView.svelte";
   import { fade } from "svelte/transition";
   import { customForm } from "$lib/stores/componentStores";
 	import type { Writable } from "svelte/store";
@@ -7,22 +6,13 @@
   export let visible: Writable<boolean>;
   export let lookup: Writable<number>;
 
-  // let currentField = $customForm[$lookup];
-
-  const closeModal = () => {
+	const closeModal = () => {
     $visible = false;
   };
 
   const editModal = () => {
     console.log('edit')
   }
-
-  // $: if ($customForm[$lookup]) {
-  //   console.log(JSON.stringify($customForm[$lookup].props))
-  // }
-
-
-// fields = [ {val: }, {}, {}  ]
 </script>
 
 {#if $visible}
@@ -37,14 +27,8 @@
     {#if prop === 'fields'}
       <h4>{prop.toUpperCase()}: </h4>
         {#each Object.keys($customForm[$lookup].props.fields) as field}
-          <p>{field}</p>
-          <!-- <p>{JSON.stringify(Object.entries($customForm[$lookup].props.fields))}</p> -->
-          <!-- {#each Object.values($customForm[$lookup].props.fields[field]) as inputParam}
-            <h5>{inputParam[0]}</h5> -->
-            <!-- <input type="text" bind:value={$customForm[$lookup].props.fields[inputParam]} /> -->
-          <!-- {/each} -->
           {#each Object.entries($customForm[$lookup].props.fields[field]) as component}
-            <p>{component[0]}</p>
+            <h1>{component[0]}</h1>
             <input type="text" bind:value={$customForm[$lookup].props.fields[field][component[0]]} />
           {/each}
         {/each}
