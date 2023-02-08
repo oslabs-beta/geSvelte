@@ -23,45 +23,46 @@ function createCustomForm() {
     subscribe,
     // TODO: update function to accept a parameter of props (provided by helper form)
     addField: (type: 'Radio' | 'Checkbox') : void => {
-      update(previousState => Object.assign({}, previousState, {
-        [id++] : {
-          component: base[type],
-          type,
-          props: {
-            // TODO: Use generated ID to assist with name/ID
-            id: type + Math.floor(Math.random() * 10000),
-            name: type + Math.floor(Math.random() * 10000),
-            fields: [
-              {value: 'working1', checked: true, label: 'should be1'},
-              {value: 'working2', checked: true, label: 'should be2'},
-              {value: 'working3', checked: true, label: 'should be3'},
-            ],
-            legend: "These are some test directions:"
+      update(previousState => {
+        const newId = ++id;
+        const initialProps = Object.assign({}, structuredClone(defaultProps[type]), {name: type + `-${newId}`, id: newId})
+        const updatedState = Object.assign({}, previousState, {
+          [newId] : {
+            component: base[type],
+            type,
+            props: initialProps
           }
-        }
-      }))
+        });
+
+        return updatedState;
+      })
     },
-    addRadio: (type: 'Radio', fields: LabelValue[]) : void => {
-      update((previousState) => Object.assign({}, previousState, { [id++] : { 
-        component: base[type],
-        type,
-        fields
-      }}))
-    },
-    addCheckbox: (type: 'Checkbox') : void => {
-      update((previousState) => (Object.assign({}, previousState, { 
-            [id++] : { 
-              component: base[type],
-              type,
-              fields: [
-                {value: 'test1', checked: false},
-                {value: 'test2', checked: false},
-              ] 
-            }
-      })));
+    deleteField: (id: number) : void => {
+      update(previousState => {
+        const updatedState = Object.assign({}, previousState);
+        delete updatedState[id];
+        return updatedState;
+      })
     },
     set
   }
 }
+
+const defaultProps = {
+  'Radio': {
+    legend: 'Write your directons here.',
+    fields: [
+      {value: 'option1', label: 'Option 1'},
+      {value: 'option2', label: 'Option 2'},
+    ],
+  },
+  'Checkbox': {
+    fields: [
+      { value: 'check1', label: 'Check 1', checked: false},
+      { value: 'check2', label: 'Check 2', checked: false},
+      { value: 'check3', label: 'Check 3', checked: false},
+    ],
+  }
+};
 
 export const customForm = createCustomForm();
