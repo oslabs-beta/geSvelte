@@ -29,6 +29,8 @@
 <fieldset class="radio-group {styleClass}">
   <legend>{legend}</legend>
   {#each fields as field}
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <!-- TODO: Add support for accessibility -->
   <label on:click={() => selected = field.value} for={field.label}>
     <input type="radio" bind:group={selected} id={`${id}-${field.value}`} {name} value={field.value}>
     <span>{field.label}</span>
