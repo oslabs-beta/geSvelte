@@ -7,17 +7,18 @@
 -->
 
 <script lang="ts">
-  import type { CheckboxField } from "$lib/types";
+  import type { Checked } from "$lib/types";
 
-  export let fields: CheckboxField[] = [{ value: 'test', checked: false}];
+  export let fields: Checked[] = [{ value: 'test', label: 'Test', checked: false}];
   export let name: string = 'default';
+  export let id: number | string;
 
   let checked: any[] = [];
 </script>
 
 <fieldset>
   {#each fields as field}
-    <input type="checkbox" id={field.value} bind:group={checked} {name} value={field.value} checked={field.checked}>
-    <label for={field.value}>{field.value}</label>
+    <input type="checkbox" id={`${id}-${field.value}`} bind:group={checked} {name} value={field.value} checked={field.checked}>
+    <label for={field.value}>{field.label}</label>
   {/each}
 </fieldset>

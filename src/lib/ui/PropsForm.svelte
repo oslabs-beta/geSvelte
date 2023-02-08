@@ -6,20 +6,21 @@
   let visible: Writable<boolean> = writable(false);
   let id: Writable<number> = writable();
 
-  const showProps = (id: number) => {
+  const showProps = (newId: number) => {
     $visible = true;
-    $id = id;
+    $id = newId;
   };
   
 </script>
 
-<Modal visible={visible} lookup={id} />
+<Modal {visible} lookup={id} />
 
 {#each Object.entries($customForm) as val}
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div class="p-hover">
     <!-- val is an array... val[0] is the id... val[1] is obj with keys of (?)Component(?), Type, & Props -->
-    <p on:click={() => showProps(+val[0])}>{`Key ${val[1].props.id} `}</p>
+    <p on:click={() => showProps(+val[0])}>{`Key ${val[0]} `}</p>
+    <button type="button" on:click={() => customForm.deleteField(+val[0])}>Delete</button>
   </div>
 {/each}
 
