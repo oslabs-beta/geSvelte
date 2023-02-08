@@ -24,11 +24,11 @@
 </Modal> -->
 
 <SlidingPanel id="556">
-	<div class="ges-row flex direction-column justify-around">
-		<button class="gesvelte-btn btn-lg" on:click={() => customForm.addField('Checkbox')}
+	<div class="ges-row flex direction-column flex-items-center">
+		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Checkbox')}
 			>Add Checkbox</button
 		>
-		<button class="gesvelte-btn btn-lg" on:click={() => customForm.addField('Radio')}
+		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Radio')}
 			>Add Radio</button
 		>
 		<PropsForm />
@@ -36,24 +36,23 @@
 </SlidingPanel>
 
 <div class="container">
-	<div class="flex direction-row py80 px40">
-		<div class="col-2 col-gap">
-			<Panel themeClass="glass-bg" title="New Form" desc="This is where new fields should populate">
-				<form>
-					<!-- {Object.keys($customForm)} -->
-					{#each Object.values($customForm) as element}
-						<!-- TODO: Create component interface/type to properly type values of customForm -->
-						<svelte:component this={element.component} {...element.props} />
-						<!-- <svelte:component this={element.component} fields={element.fields} /> -->
-					{/each}
-				</form>
-			</Panel>
-		</div>
-		<div class="container col-2">
-			<CodeView />
-		</div>
+	<div class="ges-row flex direction-column justify-center flex-items-center py80 px40">
+		<Panel themeClass="glass-bg" title="New Form" desc="This is where new fields should populate">
+			<form>
+				<!-- {Object.keys($customForm)} -->
+				{#each Object.values($customForm) as element}
+					<!-- TODO: Create component interface/type to properly type values of customForm -->
+					<svelte:component this={element.component} {...element.props} />
+					<!-- <svelte:component this={element.component} fields={element.fields} /> -->
+				{/each}
+			</form>
+		</Panel>
+		<button class="gesvelte-btn mt-30 rounded glass-bg" on:click={() => trigger()}>Edit Form</button
+		>
 	</div>
-	<div><!-- Row --></div>
-	<!-- Container -->
-	<button class="gesvelte-btn" on:click={() => trigger()}>Open</button>
 </div>
+
+<div class="container" style="display:none;">
+	<CodeView />
+</div>
+<!-- Container -->

@@ -11,6 +11,7 @@
   import type { LabelValue } from "$lib/types";
 
   export let styleClass: string = "gesvelte-default";
+  export let id: number | string;
   export let name: string = "default";
   export let legend: string = "Default directions:"
   export let fields: LabelValue[] = [
@@ -29,7 +30,7 @@
   <legend>{legend}</legend>
   {#each fields as field}
   <label for={field.label}>
-    <input type="radio" bind:group={selected} id={field.label} {name} value={field.value}>
+    <input type="radio" bind:group={selected} id={`${id}-${field.value}`} {name} value={field.value}>
     <span>{field.label}</span>
   </label>
   {/each}

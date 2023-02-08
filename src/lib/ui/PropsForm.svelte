@@ -19,6 +19,7 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div class="p-hover">
 		<!-- val is an array... val[0] is the id... val[1] is obj with keys of (?)Component(?), Type, & Props -->
-		<p on:click={() => showProps(+val[0])}>{`Key ${val[1].props.id} `}</p>
+		<p on:click={() => showProps(+val[0])}>{`Key ${val[0]} `}</p>
+		<button type="button" on:click={() => customForm.deleteField(+val[0])}>Delete</button>
 	</div>
 {/each}

@@ -255,6 +255,9 @@ body {
 .flex-auto {
 	flex: 1 1 auto;
 }
+.flex-wrap {
+	flex-wrap: wrap;
+}
 .flex-items-center {
 	align-items: center;
 }
@@ -266,6 +269,9 @@ body {
 }
 .justify-start {
 	justify-content: flex-start;
+}
+.justify-evenly {
+	justify-content: space-evenly;
 }
 .direction-row {
 	flex-direction: row;
@@ -423,6 +429,10 @@ body {
 	height: 5rem;
 }
 /*Margin*/
+.margin-auto {
+	margin: 0 auto;
+}
+
 .ml1 {
 	margin-left: 0.5rem;
 }
@@ -463,6 +473,36 @@ body {
 }
 .mb4 {
 	margin-bottom: 2rem;
+}
+.mt-5 {
+	margin-top: 5px;
+}
+.mt-10 {
+	margin-top: 10px;
+}
+.mt-15 {
+	margin-top: 15px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.mt-25 {
+	margin-top: 25px;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+.mt-35 {
+	margin-top: 35px;
+}
+.mt-40 {
+	margin-top: 40px;
+}
+.mt-50 {
+	margin-top: 50px;
+}
+.mt-60 {
+	margin-top: 60px;
 }
 /*Padding Top and Bottom*/
 .pt1 {
@@ -709,16 +749,14 @@ button.gesvelte-btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-weight: bold;
 	border-radius: 0.6rem;
 	background: #da3bcd;
 	color: #fff;
 	padding: 1.5rem 2.5rem;
 	margin-bottom: 2rem;
 	text-transform: uppercase;
-	letter-spacing: 0.1rem;
 	border: 1px solid transparent;
-	transition: all 0.2s ease;
+	transition: all 0.3s ease;
 }
 .gesvelte-btn.btn-hover:hover {
 	background: transparent;
@@ -752,31 +790,6 @@ button.gesvelte-btn {
 	font-size: 1.6rem;
 	color: #fff;
 	letter-spacing: 0.08rem;
-}
-button.gesvelte-btn {
-	display: flex-inline;
-	justify-content: center;
-	align-items: center;
-	font-weight: bold;
-	border-radius: 0.4rem;
-	background: #fff;
-	color: #da3bcd;
-	padding: 1.5rem 2.5rem;
-	margin-bottom: 2rem;
-	text-shadow: 1px 1px 1px rgba(84, 84, 84, 0.25);
-	outline: 0px solid transparent;
-}
-button.gesvelte-btn:focus {
-	outline: 0px solid transparent;
-}
-.gesvelte-btn.btn-sm {
-	padding: 1rem 2rem;
-}
-.gesvelte-btn.btn-lg {
-	padding: 1.3rem 4rem;
-}
-.gesvelte-btn.btn-xlg {
-	padding: 2rem 4rem;
 }
 
 /*
@@ -861,12 +874,9 @@ label.active {
 	right: 0;
 	height: 100vh;
 	color: #fff;
-	width: 300px;
-	background: rgba(255, 255, 255, 0.72);
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
-	backdrop-filter: blur(6.5px);
-	-webkit-backdrop-filter: blur(5.9px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	width: 40rem;
+	border-radius: 0;
+	border-left: 3px solid #da3bcd;
 }
 .flyout-panel span {
 	position: absolute;
