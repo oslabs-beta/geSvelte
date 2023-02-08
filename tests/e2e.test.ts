@@ -17,23 +17,34 @@ test.describe('HEADER', () => {
 		await page.getByRole('banner').getByRole('link', { name: 'Stage' }).click();
 		await expect(page).toHaveURL('/stage');
 	});
-})
+});
 
-// test('Landing page has all elements', async ({ page }) => {
-	// });
+test.describe('HOME', () => {
+	test.beforeEach(async ({ page }) => {
+		await page.goto('/')
+	});
+	test('test', async ({ page }) => {
+		await expect(page.getByRole('img', { name: 'main-site-logo' })).toBeVisible();
+		await expect(page.getByRole('img', { name: 'Built with Svelte' })).toBeVisible();
+		await expect(page.getByRole('heading', { name: 'Christian Ashley' })).toHaveText('Christian Ashley');
+		await expect(page.getByRole('heading', { name: 'Johnny Howell' })).toHaveText('Johnny Howell');
+		await expect(page.getByRole('heading', { name: 'Stefan Jordan' })).toHaveText('Stefan Jordan');
+		await expect(page.getByRole('heading', { name: 'Ksenia Salova' })).toHaveText('Ksenia Salova');
+		await expect(page.getByRole('heading', { name: 'Umair Shafiq' })).toHaveText('Umair Shafiq');
+		await expect(page.getByRole('heading', { name: 'Why GesVelte?' })).toBeVisible();
+	});
+});
+	
 test.describe('STAGE', () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto('/stage')
-	})
-	
+	});
 	test('Stage page contains correct things', async ({ page }) => {
-		// await page.goto('http://localhost:5173/stage');
 		await expect(page.getByRole('img', { name: 'toolbar-logo-img' })).toBeVisible();
 		expect(await page.textContent('nav')).toMatch("Home FAQs Stage Docs");
 		await expect(page.getByRole('heading', { name: 'New Form' })).toBeVisible();
 		await expect(page.getByText('This is where new fields should populate')).toBeVisible();
-	})
-
+	});
 	test('Stage page functionality', async ({ page }) => {
 		await page.getByRole('button', { name: 'Edit Form' }).click();
 			await expect(page.getByRole('button', { name: 'Add Checkbox' })).toBeVisible();
@@ -68,12 +79,12 @@ test.describe('STAGE', () => {
 
 // Accessibility testing using AxeBuilder
 
-test.describe('ACCESSIBILITY HOMEPAGE', () => { // 2
-  test('should not have any automatically detectable accessibility issues', async ({ page }) => {
-    await page.goto('http://localhost:5173/'); // 3
+test.describe('ACCESSIBILITY HOMEPAGE', () => {
+  test('Should NOT have any automatically detectable accessibility issues', async ({ page }) => {
+    await page.goto('http://localhost:5173/');
 
-    const accessibilityScanResults = await new AxeBuilder.default({ page }).analyze(); // 4
+    const accessibilityScanResults = await new AxeBuilder.default({ page }).analyze();
 
-    expect(accessibilityScanResults.violations).toEqual([]); // 5
+    expect(accessibilityScanResults.violations).toEqual([]);
   });
 });
