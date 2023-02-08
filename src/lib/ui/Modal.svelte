@@ -2,7 +2,7 @@
 	import { createPortal } from '$lib/actions';
 	import CodeView from '$lib/ui/CodeView.svelte';
 	import { fade } from 'svelte/transition';
-	import { customForm } from '$lib/stores/componentStores';
+	import { customForm, defaultProps } from '$lib/stores/componentStores';
 	import type { Writable } from 'svelte/store';
 
 	export let visible: Writable<boolean>;
@@ -20,6 +20,14 @@
 		e.preventDefault;
 		value = e.currentTarget.value;
 	}
+
+	const addInput = (storeField) => {
+		customForm.addInput($lookup, structuredClone(defaultProps[storeField.type].fields[0]));
+	};
+
+	const deleteInput = (index: number) => {
+		customForm.deleteInput($lookup, index);
+	};
 </script>
 
 {#if $visible}
@@ -34,31 +42,32 @@
 			<button class="gesvelte-btn rounded" on:click={editModal}>Edit</button>
 		</div>
 		<slot />
-		<!-- <p>{JSON.stringify($customForm[$lookup])}</p> -->
 		<h2 class="text-center" style="display:block;">Field Type: {$customForm[$lookup].type}</h2>
 		<div class="ges-row flex direction-row justify-evenly flex-wrap">
 			{#each Object.keys($customForm[$lookup].props) as prop}
 				{#if prop === 'fields'}
-					<!-- <h4>{prop.toUpperCase()}:</h4> -->
-					{#each Object.keys($customForm[$lookup].props.fields) as field}
-						{#each Object.entries($customForm[$lookup].props.fields[field]) as component}
-							<!-- <span>{component[0]}</span> -->
+					{#each Object.keys($customForm[$lookup].props.fields) as index}
+					<div>
+						{#each Object.keys($customForm[$lookup].props.fields[index]) as component}
 							<input
 								type="text"
 								placeholder="Field Name"
-								bind:value={$customForm[$lookup].props.fields[field][component[0]]}
+								bind:value={$customForm[$lookup].props.fields[index][component]}
 							/>
-						{/each}
+							{/each}
+							<button class="gesvelte-btn" type="button" on:click={() => deleteInput(+index)}>Delete</button>
+					</div>
 					{/each}
+					<button class="gesvelte-btn" type="button" on:click={() => addInput($customForm[$lookup])}>Add</button>
 				{:else}
-					<h4>
-						{prop.toUpperCase()}:
-						<input
-							type="text"
-							placeholder="Field Value"
-							bind:value={$customForm[$lookup].props[prop]}
-						/>
-					</h4>
+					<div>	
+						<h4>{prop.toUpperCase()}:</h4>
+							<input
+								type="text"
+								placeholder="Field Value"
+								bind:value={$customForm[$lookup].props[prop]}
+							/>
+					</div>
 				{/if}
 			{/each}
 		</div>
