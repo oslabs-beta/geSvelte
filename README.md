@@ -12,24 +12,23 @@ Simplify form building for your website or web application with **geSvelte** - a
 As a product built under the open-source tech accelerator OS Labs, **geSvelte** is continuously growing and improving to better serve the needs of developers.
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-        <li><a href="#features">Features</a></li>
-      </ul>
-    </li>
-    <li><a href="#setup">Setup</a></li>
-    <li><a href="#future-release-plans">Future Release Plans</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#authors">Authors</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-    <li><a href="#license">License</a></li>
-  </ol>
-</details>
+
+<summary>Table of Contents</summary>
+<ol>
+  <li>
+    <a href="#about-the-project">About The Project</a>
+    <ul>
+      <li><a href="#built-with">Built With</a></li>
+      <li><a href="#features">Features</a></li>
+    </ul>
+  </li>
+  <li><a href="#setup">Setup</a></li>
+  <li><a href="#future-release-plans">Future Release Plans</a></li>
+  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#authors">Authors</a></li>
+  <li><a href="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#license">License</a></li>
+</ol>
 
 <!-- ABOUT THE PROJECT -->
 
