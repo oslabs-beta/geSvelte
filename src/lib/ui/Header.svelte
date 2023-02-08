@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="full-row flex direction-row flex-items-center justify-between height-100">
 			<div class="toolbar-logo">
-				<img src={toolbarLogo} alt="toolbar-logo-img" />
+				<a href='/'><img src={toolbarLogo} alt="toolbar-logo-img" /></a>
 			</div>
 			<div class="main-nav">
 				<nav>
