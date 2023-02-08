@@ -222,7 +222,6 @@ video {
 	box-sizing: border-box;
 }
 body {
-	height: 100vh;
 	width: 100vw;
 	font-size: 1.3rem;
 	font-family: 'Fira Sans';
@@ -300,7 +299,7 @@ body {
 	margin: 0 auto;
 	padding: 0 4rem;
 }
-.col {
+.col-gap {
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 }
@@ -515,14 +514,75 @@ body {
 .p-all10 {
 	padding: 5rem;
 }
-.py80 {
-	padding-top: 80px;
-	padding-bottom: 80px;
+
+/* Padding Left & Right */
+.py10 {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.py20 {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.py30 {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+.py40 {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
 }
 .py50 {
 	padding-top: 5rem;
 	padding-bottom: 5rem;
 }
+.py60 {
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+}
+.py70 {
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+}
+.py80 {
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+}
+
+/* Padding Top & Bottom */
+.px10 {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.px20 {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.px30 {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+.px40 {
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+.px50 {
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+.px60 {
+	padding-left: 6rem;
+	padding-right: 6rem;
+}
+.px70 {
+	padding-left: 7rem;
+	padding-right: 7rem;
+}
+.px80 {
+	padding-left: 8rem;
+	padding-right: 8rem;
+}
+
 .pl1 {
 	padding-left: 0.5rem;
 }
@@ -563,7 +623,11 @@ body {
 	font-size: 1.6rem;
 }
 .text-lg {
+	font-size: 1.8rem;
 	font-weight: 2rem;
+}
+h3.text-lg {
+	font-size: 2.8rem;
 }
 .text-bold {
 	font-weight: 700;
@@ -669,7 +733,7 @@ button.gesvelte-btn {
 	padding: 1rem 2rem;
 }
 .gesvelte-btn.btn-lg {
-	font-size: 1.8rem;
+	font-size: 1.4rem;
 	padding: 1.8rem 5rem;
 }
 .gesvelte-btn.btn-xlg {
@@ -690,7 +754,7 @@ button.gesvelte-btn {
 	letter-spacing: 0.08rem;
 }
 button.gesvelte-btn {
-	display: flex;
+	display: flex-inline;
 	justify-content: center;
 	align-items: center;
 	font-weight: bold;
@@ -790,6 +854,7 @@ label.active {
 	background: rgb(252, 50, 239);
 }
 .flyout-panel {
+	z-index: 100;
 	position: fixed;
 	overflow: hidden;
 	top: 0;
