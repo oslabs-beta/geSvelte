@@ -47,6 +47,7 @@
 			{#each Object.keys($customForm[$lookup].props) as prop}
 				{#if prop === 'fields'}
 					{#each Object.keys($customForm[$lookup].props.fields) as index}
+					<div>
 						{#each Object.keys($customForm[$lookup].props.fields[index]) as component}
 							<input
 								type="text"
@@ -55,6 +56,7 @@
 							/>
 							{/each}
 							<button class="gesvelte-btn" type="button" on:click={() => deleteInput(+index)}>Delete</button>
+					</div>
 					{/each}
 					<button class="gesvelte-btn" type="button" on:click={() => addInput($customForm[$lookup])}>Add</button>
 				{:else}
