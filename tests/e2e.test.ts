@@ -50,7 +50,7 @@ test('Stage page is functional', async ({ page }) => {
 		await expect(page.getByText('new legend', { exact: true })).toBeVisible();
 			
 	await page.locator('div').filter({ hasText: 'Key 2' }).getByRole('button', { name: 'Delete' }).click();
-	// 	await expect(page.getByText('new legend', { exact: true })).not.toBeVisible();
+		await expect(page.getByText('new legend', { exact: true })).not.toBeVisible();
 
 	
 
