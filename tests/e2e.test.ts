@@ -81,8 +81,20 @@ test.describe('STAGE', () => {
 
 test.describe('ACCESSIBILITY HOMEPAGE', () => {
   test('Should NOT have any automatically detectable accessibility issues', async ({ page }) => {
-    await page.goto('http://localhost:5173/');
+    await page.goto('/');
+	// .default is workaround, will still leave a typescript error
+	// https://github.com/dequelabs/axe-core-npm/issues/601
+    const accessibilityScanResults = await new AxeBuilder.default({ page }).analyze();
 
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
+});
+
+test.describe('ACCESSIBILITY STAGE', () => {
+  test('Should NOT have any automatically detectable accessibility issues', async ({ page }) => {
+    await page.goto('/stage');
+	// .default is workaround, will still leave a typescript error
+	// https://github.com/dequelabs/axe-core-npm/issues/601
     const accessibilityScanResults = await new AxeBuilder.default({ page }).analyze();
 
     expect(accessibilityScanResults.violations).toEqual([]);
