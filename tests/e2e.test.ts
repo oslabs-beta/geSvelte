@@ -1,4 +1,4 @@
-import AxeBuilder from '@axe-core/playwright'; // 1
+// import AxeBuilder from '@axe-core/playwright'; // 1
 import { expect, test } from '@playwright/test';
 
 test('Header has all elements, links are working', async ({ page }) => {
@@ -19,6 +19,7 @@ test('Header has all elements, links are working', async ({ page }) => {
 
 // test('Landing page has all elements', async ({ page }) => {
 // });
+
 test('Stage page is functional', async ({ page }) => {
 	await page.goto('http://localhost:5173/stage');
 		await expect(page.getByRole('img', { name: 'toolbar-logo-img' })).toBeVisible();
@@ -49,21 +50,14 @@ test('Stage page is functional', async ({ page }) => {
 		await expect(page.getByRole('heading', { name: 'Field Type: Radio' })).not.toBeVisible();
 		await expect(page.getByText('new legend', { exact: true })).toBeVisible();
 			
-	await page.locator('div').filter({ hasText: 'Key 2' }).getByRole('button', { name: 'Delete' }).click();
+	await page.locator('div').filter({ hasText: 'Key 2 Delete' }).getByRole('button', { name: 'Delete' }).click();
 		await expect(page.getByText('new legend', { exact: true })).not.toBeVisible();
-
-	
-
-	// await page.getByText('Add Checkbox Add Radio').click();
-	// await page.getByText('Check 1 Check 2 Check 3').click();
-	// await page.getByRole('button', { name: 'Add Radio' }).click();
-	// await page.getByText('Write your directons here.', { exact: true }).click();
-	// await page.locator('div').filter({ hasText: 'Key 2 Delete' }).getByRole('button', { name: 'Delete' }).click();
-	// await page.getByRole('button', { name: 'Delete' }).click();
-	// await page.getByText('X', { exact: true }).click();
   });
 
+
+
 // Accessibility testing using AxeBuilder
+
 // test.describe('homepage', () => { // 2
 //   test('should not have any automatically detectable accessibility issues', async ({ page }) => {
 //     await page.goto('http://localhost:5173/'); // 3
