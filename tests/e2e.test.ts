@@ -23,7 +23,7 @@ test.describe('HOME', () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto('/')
 	});
-	test('test', async ({ page }) => {
+	test('Home page should contain all elements', async ({ page }) => {
 		await expect(page.getByRole('img', { name: 'main-site-logo' })).toBeVisible();
 		await expect(page.getByRole('img', { name: 'Built with Svelte' })).toBeVisible();
 		await expect(page.getByRole('heading', { name: 'Christian Ashley' })).toHaveText('Christian Ashley');
@@ -42,13 +42,15 @@ test.describe('STAGE', () => {
 	test('Stage page contains correct things', async ({ page }) => {
 		await expect(page.getByRole('img', { name: 'toolbar-logo-img' })).toBeVisible();
 		expect(await page.textContent('nav')).toMatch("Home FAQs Stage Docs");
-		await expect(page.getByRole('heading', { name: 'New Form' })).toBeVisible();
+		await expect(page.getByRole('heading', { name: 'Customize a New Form', exact: true })).toBeVisible();
+  		await expect(page.getByRole('heading', { name: 'New Form', exact: true })).toBeVisible()
 		await expect(page.getByText('This is where new fields should populate')).toBeVisible();
 	});
 	test('Stage page functionality', async ({ page }) => {
 		await page.getByRole('button', { name: 'Edit Form' }).click();
 			await expect(page.getByRole('button', { name: 'Add Checkbox' })).toBeVisible();
 			await expect(page.getByRole('button', { name: 'Add Radio' })).toBeVisible();
+			// await expect(page.getByRole('button', { name: 'Add Input' })).toBeVisible();
 		
 		await page.getByRole('button', { name: 'Add Checkbox' }).click();
 			await expect(page.getByText('Check 1 Check 2 Check 3')).toBeVisible();
