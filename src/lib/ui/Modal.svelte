@@ -24,6 +24,10 @@
 	const addInput = (storeField) => {
 		customForm.addInput($lookup, structuredClone(defaultProps[storeField.type].fields[0]));
 	};
+
+	const deleteInput = (index: number) => {
+		customForm.deleteInput($lookup, index);
+	};
 </script>
 
 {#if $visible}
@@ -42,14 +46,15 @@
 		<div class="ges-row flex direction-row justify-evenly flex-wrap">
 			{#each Object.keys($customForm[$lookup].props) as prop}
 				{#if prop === 'fields'}
-					{#each Object.keys($customForm[$lookup].props.fields) as field}
-						{#each Object.entries($customForm[$lookup].props.fields[field]) as component}
+					{#each Object.keys($customForm[$lookup].props.fields) as index}
+						{#each Object.keys($customForm[$lookup].props.fields[index]) as component}
 							<input
 								type="text"
 								placeholder="Field Name"
-								bind:value={$customForm[$lookup].props.fields[field][component[0]]}
+								bind:value={$customForm[$lookup].props.fields[index][component]}
 							/>
-						{/each}
+							{/each}
+							<button class="gesvelte-btn" type="button" on:click={() => deleteInput(+index)}>Delete</button>
 					{/each}
 					<button class="gesvelte-btn" type="button" on:click={() => addInput($customForm[$lookup])}>Add</button>
 				{:else}

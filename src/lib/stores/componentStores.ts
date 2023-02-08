@@ -44,6 +44,23 @@ function createCustomForm() {
         return updatedState;
       })
     },
+    deleteInput: (id: number, deletedIndex: number) : void => {
+      update(previousState => {
+        const lookup = id as unknown as keyof typeof updatedState;
+        const updatedState = Object.assign({}, previousState);
+
+        console.log(id, deletedIndex)
+        const arrWithoutDeleted = [];
+
+        for (let i = 0; i < updatedState[lookup].props.fields.length; ++i) {
+          if (i !== deletedIndex) arrWithoutDeleted.push(updatedState[lookup].props.fields[i])
+        }
+
+        updatedState[lookup].props.fields = arrWithoutDeleted;
+
+        return updatedState;
+      })
+    },
     set
   }
 }
