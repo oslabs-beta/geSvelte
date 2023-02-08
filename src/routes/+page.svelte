@@ -5,6 +5,7 @@
 	import svelteLogo from '$lib/assets/svelte-logo.png';
 </script>
 
+<main>
 <div class="container">
 	<section class="hero-area flex flex-items-center justify-between pos-rel">
 		<div class="ges-row">
@@ -43,7 +44,7 @@
 							<span class="icon mb4">
 								<img src={icon1} alt="Link Icon" />
 							</span>
-							<h3 class="mb3">Lorem Ipsum</h3>
+							<h2 class="mb3">Lorem Ipsum</h2>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -56,7 +57,7 @@
 							<span class="icon mb4">
 								<img src={icon1} alt="Link Icon" />
 							</span>
-							<h3 class="mb3">Lorem Ipsum</h3>
+							<h2 class="mb3">Lorem Ipsum</h2>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -69,7 +70,7 @@
 							<span class="icon mb4">
 								<img src={icon1} alt="Link Icon" />
 							</span>
-							<h3 class="mb3">Lorem Ipsum</h3>
+							<h2 class="mb3">Lorem Ipsum</h2>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -163,6 +164,7 @@
 		</div>
 	</section>
 </div>
+</main>
 <slot />
 
 <style lang="scss">

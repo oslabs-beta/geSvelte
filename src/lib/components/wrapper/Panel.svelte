@@ -7,7 +7,7 @@
 </script>
 
 <div class="gesvelte-form-panel flex direction-column {themeClass}">
-	<h3>{title}</h3>
+	<h2 class="secondary-heading">{title}</h2>
 	<p>{desc}</p>
 	<slot />
 </div>
