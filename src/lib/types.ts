@@ -19,4 +19,7 @@ export type LabelValue = {
 	label: string;
 }
 
-export type Checked = LabelValue & { checked: boolean }
+export type Checked = LabelValue & { checked: boolean };
+
+// TODO: verify all 'text' input types
+export type textInputs = 'text' | 'username' | 'email' | 'password' | 'tel' | 'url';

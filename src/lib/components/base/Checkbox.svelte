@@ -19,6 +19,6 @@
 <fieldset>
   {#each fields as field}
     <input type="checkbox" id={`${id}-${field.value}`} bind:group={checked} {name} value={field.value} checked={field.checked}>
-    <label for={field.value}>{field.label}</label>
+    <label for={`${id}-${field.value}`}>{field.label}</label>
   {/each}
 </fieldset>

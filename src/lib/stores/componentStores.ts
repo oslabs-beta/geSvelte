@@ -1,18 +1,6 @@
 import { writable } from "svelte/store";
 import * as base from '$lib/components/base';
-import type { LabelValue } from "$lib/types";
-// import type { BaseComponents } from "$lib/types";
 
-const fields: string[] = [];
-/**
- * TODO: will a component always have a fields property?
- */
-export const componentStore = writable({
-  fields
-}, () => {
-  console.log('componentStore got a subscriber');
-  return () => console.log('componentStore has no more subscribers')
-})
 
 function createCustomForm() {
   // TODO: a better system to create unique IDs
@@ -22,10 +10,10 @@ function createCustomForm() {
   return {
     subscribe,
     // TODO: update function to accept a parameter of props (provided by helper form)
-    addField: (type: 'Radio' | 'Checkbox') : void => {
+    addField: (type: 'Radio' | 'Checkbox' | 'Input') : void => {
       update(previousState => {
         const newId = ++id;
-        const initialProps = Object.assign({}, structuredClone(defaultProps[type]), {name: type + `-${newId}`, id: newId})
+        const initialProps = Object.assign({}, structuredClone(defaultProps[type]), {name: type + `-${newId}`, id: newId});
         const updatedState = Object.assign({}, previousState, {
           [newId] : {
             component: base[type],
@@ -40,7 +28,8 @@ function createCustomForm() {
     deleteField: (id: number) : void => {
       update(previousState => {
         const updatedState = Object.assign({}, previousState);
-        delete updatedState[id];
+        // TODO: properly cast the type of id
+        delete updatedState[id as unknown as keyof typeof updatedState];
         return updatedState;
       })
     },
@@ -50,7 +39,7 @@ function createCustomForm() {
 
 const defaultProps = {
   'Radio': {
-    legend: 'Write your directons here.',
+    legend: 'Write your directions here.',
     fields: [
       {value: 'option1', label: 'Option 1'},
       {value: 'option2', label: 'Option 2'},
@@ -62,6 +51,12 @@ const defaultProps = {
       { value: 'check2', label: 'Check 2', checked: false},
       { value: 'check3', label: 'Check 3', checked: false},
     ],
+  },
+  'Input': {
+    placeholder: 'Default placeholder', 
+    labelClass: '', 
+    labelText: 'Default label', 
+    inputType: 'text', 
   }
 };
 
