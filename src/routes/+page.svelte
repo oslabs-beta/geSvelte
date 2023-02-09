@@ -32,7 +32,7 @@
 				<div class="ges-row py80">
 					<div class="site-features flex">
 						<div class="col-one-third p-all5">
-							<div class="feature-box glass-bg text-center">
+							<div class="feature-box glass-bg text-center animatedEl">
 								<UserIcon />
 								<h3 class="mb-20">A11Y Ready</h3>
 								<p>
@@ -43,7 +43,7 @@
 							</div>
 						</div>
 						<div class="col-one-third p-all5">
-							<div class="feature-box glass-bg text-center">
+							<div class="feature-box glass-bg text-center animatedEl">
 								<BrushIcon />
 								<h3 class="mb-20">Forms With Style</h3>
 								<p>
@@ -54,7 +54,7 @@
 							</div>
 						</div>
 						<div class="col-one-third p-all5">
-							<div class="feature-box glass-bg text-center">
+							<div class="feature-box glass-bg text-center animatedEl">
 								<ClockIcon />
 								<h3 class="mb-20">Save Time</h3>
 								<p>
