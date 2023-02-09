@@ -10,7 +10,7 @@ function createCustomForm() {
   return {
     subscribe,
     // TODO: update function to accept a parameter of props (provided by helper form)
-    addField: (type: 'Radio' | 'Checkbox' | 'Input' | 'Button') : void => {
+    addField: (type: 'Radio' | 'Checkbox' | 'Input') : void => {
       update(previousState => {
         const newId = ++id;
         const initialProps = Object.assign({}, structuredClone(defaultProps[type]), {name: type + `-${newId}`, id: newId});
@@ -89,10 +89,5 @@ export const defaultProps = {
     labelClass: '', 
     labelText: 'Default label', 
     inputType: 'text', 
-  },
-  'Button': {
-    type: 'submit',
-    value: 'Submit',
-    className: ''
   }
 };
