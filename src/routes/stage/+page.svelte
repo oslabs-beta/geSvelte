@@ -28,6 +28,7 @@
 		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Checkbox')}>Add Checkbox</button>
 		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Radio')}>Add Radio</button>
 		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Input')}>Add Input</button>
+		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Button')}>Add Button</button>
 		<PropsForm />
 	</div>
 </SlidingPanel>
