@@ -7,7 +7,7 @@
 
 	export let visible: Writable<boolean>;
 	export let lookup: Writable<number>;
-	export let value: string | number;
+	// export let value: string | number;
 	const closeModal = () => {
 		$visible = false;
 	};
@@ -16,10 +16,10 @@
 		console.log('edit');
 	};
 
-	function onChange(e) {
-		e.preventDefault;
-		value = e.currentTarget.value;
-	}
+	// function onChange(e) {
+	// 	e.preventDefault;
+	// 	value = e.currentTarget.value;
+	// }
 
 	const addInput = (storeField) => {
 		customForm.addInput($lookup, structuredClone(defaultProps[storeField.type].fields[0]));
@@ -37,10 +37,6 @@
 		id="stage-modal"
 		class="gesvelte-modal glass-bg py40 px40 "
 	>
-		<div class="flex ges-row direction-row justify-evenly">
-			<button class="gesvelte-btn rounded" on:click={closeModal}>Close</button>
-			<button class="gesvelte-btn rounded" on:click={editModal}>Edit</button>
-		</div>
 		<slot />
 		<h2 class="text-center" style="display:block;">Field Type: {$customForm[$lookup].type}</h2>
 		<div class="ges-row flex direction-row justify-evenly flex-wrap">
@@ -49,11 +45,33 @@
 					{#each Object.keys($customForm[$lookup].props.fields) as index}
 					<div>
 						{#each Object.keys($customForm[$lookup].props.fields[index]) as component}
-							<input
-								type="text"
-								placeholder="Field Name"
-								bind:value={$customForm[$lookup].props.fields[index][component]}
-							/>
+							<!-- {console.log(component)} -->
+							{#if component === 'checked'}
+								<input
+									id={`${$lookup}-${index}-${component}`}
+									name={`${$lookup}-${index}-${component}`}
+									type="checkbox" 
+									on:click={() => {
+										// console.log($customForm[$lookup].props.fields[index][component])
+										customForm.update(ps => {
+											const ns = Object.assign({}, ps);
+											
+											ns[$lookup].props.fields[+index][component] = !ps[$lookup].props.fields[+index][component];
+											
+											return ns;
+										})
+									}}
+									checked={$customForm[$lookup].props.fields[index][component]}
+									/>
+									<label for={`${$lookup}-${index}-${component}`}>Checked by Default</label>
+							{:else}
+								<input
+									class="mr3"
+									type="text"
+									placeholder="Field Name"
+									bind:value={$customForm[$lookup].props.fields[index][component]}
+									/>
+								{/if}
 							{/each}
 							<button class="gesvelte-btn" type="button" on:click={() => deleteInput(+index)}>Delete</button>
 					</div>
@@ -70,6 +88,10 @@
 					</div>
 				{/if}
 			{/each}
+		</div>
+		<div class="flex ges-row direction-row justify-evenly">
+			<button class="gesvelte-btn rounded" on:click={closeModal}>Close</button>
+			<!-- <button class="gesvelte-btn rounded" on:click={editModal}>Edit</button> -->
 		</div>
 	</div>
 {/if}
