@@ -1,11 +1,11 @@
 import { writable } from "svelte/store";
 import * as base from '$lib/components/base';
-
+import type { Form, LabelValue, Checked } from "$lib/types";
 
 function createCustomForm() {
   // TODO: a better system to create unique IDs
   let id = 0;
-  const { subscribe, set, update } = writable({});
+  const { subscribe, set, update } = writable<Form>({});
 
   return {
     subscribe,
@@ -25,12 +25,12 @@ function createCustomForm() {
         return updatedState;
       })
     },
-    addInput: (id: number, newInput: any) : void => {
+    addInput: (id: number, newInput: LabelValue | Checked) : void => {
       update(previousState => {
         const lookup = id as unknown as keyof typeof updatedState;
         const updatedState = Object.assign({}, previousState);
 
-        updatedState[lookup].props.fields.push(newInput);
+        updatedState[lookup].props?.fields?.push(newInput);
 
         return updatedState;
       })
@@ -50,11 +50,11 @@ function createCustomForm() {
         const updatedState = Object.assign({}, previousState);
 
         console.log(id, deletedIndex)
-        const arrWithoutDeleted = [];
+        const arrWithoutDeleted: Array<LabelValue | Checked> = [];
 
-        for (let i = 0; i < updatedState[lookup].props.fields.length; ++i) {
-          if (i !== deletedIndex) arrWithoutDeleted.push(updatedState[lookup].props.fields[i])
-        }
+        updatedState[lookup].props?.fields?.forEach((input, index) => {
+          if (index !== deletedIndex) arrWithoutDeleted.push(input);
+        });
 
         updatedState[lookup].props.fields = arrWithoutDeleted;
 
@@ -65,6 +65,9 @@ function createCustomForm() {
   }
 }
 
+export const customForm = createCustomForm();
+
+// TODO: Probably should move these to a separate file
 export const defaultProps = {
   'Radio': {
     legend: 'Write your directions here.',
@@ -87,5 +90,3 @@ export const defaultProps = {
     inputType: 'text', 
   }
 };
-
-export const customForm = createCustomForm();
