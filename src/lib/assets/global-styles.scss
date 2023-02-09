@@ -16,9 +16,14 @@ $accent-rgb: rgb(218, 59, 205);
 $accent-hsl: hsl(305, 68%, 54%);
 
 body {
+	font-size: 1.3rem;
+	font-family: 'Fira Sans';
+	margin: 0;
 	height: 100%;
+	min-height: 100vh;
 	width: 100vw;
 	background: repeat url('geo.png') #06012a;
+	color: #06012a;
 	// background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23454545' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 form {
@@ -76,7 +81,7 @@ label {
 	}
 }
 .glass-bg {
-	background: rgba(213, 216, 255, 0.25);
+	background: rgba(213, 216, 255, 0.45);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
@@ -86,7 +91,7 @@ label {
 	padding: 3rem;
 	border-radius: 0.8rem;
 	border: 3px solid rgb(218, 59, 205);
-	color: #fff;
+	color: #06012a;
 
 	label,
 	input,
@@ -104,6 +109,7 @@ label {
 			background: transparent;
 			border: 1px solid rgba(218, 59, 205, 0.5);
 			border-radius: 0.8rem;
+			color: #545454;
 
 			&:focus {
 				outline: 0;

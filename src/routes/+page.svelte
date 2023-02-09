@@ -147,7 +147,6 @@
 		flex-direction: column;
 		align-items: center;
 		padding: 4rem;
-		color: rgba(255, 255, 255, 0.6);
 		justify-content: space-evenly;
 		transition: all 0.8s ease;
 		transform: scale(1);
@@ -171,13 +170,11 @@
 		padding: 100px 0;
 	}
 	.dev-box {
-		color: rgba(255, 255, 255, 0.6);
 		padding: 2rem;
 		border: 3px solid rgba(97, 20, 108, 0.5);
 	}
 	.text-box {
 		padding: 4rem 6rem;
-		color: rgba(255, 255, 255, 0.6);
 		border: 3px solid rgba(97, 20, 108, 0.5);
 	}
 </style>
