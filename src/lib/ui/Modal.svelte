@@ -47,8 +47,7 @@
 						{#each Object.keys($customForm[$lookup].props.fields[index]) as component}
 							<!-- {console.log(component)} -->
 							{#if component === 'checked'}
-								<input 
-                  class="created-input"
+								<input class="mr3"
 									id={`${$lookup}-${index}-${component}`}
 									name={`${$lookup}-${index}-${component}`}
 									type="checkbox" 
@@ -67,6 +66,7 @@
 									<label for={`${$lookup}-${index}-${component}`}>Checked by Default</label>
 							{:else}
 								<input
+                  class="mr3"
 									type="text"
 									placeholder="Field Name"
 									bind:value={$customForm[$lookup].props.fields[index][component]}
