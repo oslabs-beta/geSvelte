@@ -3,8 +3,10 @@
   Base level component representing a radio inputs using HTML5 inputs
   params: 
     styleClass: classes used with atomic CSS selectors
+    id: id for input element
+    name: reference on submitted data
+    legend: directions for user
     fields [{value, label}]: value of the field and state of box at creation TODO: type/interface for object representing fields
-    ...
 -->
 
 <script lang="ts">
@@ -22,16 +24,18 @@
 
   let selected: string | null | undefined;
   if (fields.length) selected = fields[0].value;
-
-	// $: checked = current === group;
 </script>
 
 <fieldset class="radio-group {styleClass}">
-  <legend>{legend}</legend>
+  {#if legend.length}
+    <legend>{legend}</legend>
+  {/if}
   {#each fields as field}
-  <label for={field.label}>
-    <input type="radio" bind:group={selected} id={`${id}-${field.value}`} {name} value={field.value}>
-    <span>{field.label}</span>
-  </label>
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <!-- TODO: Add support for accessibility -->
+    <label on:click={() => selected = field.value} for={field.label}>
+      <input type="radio" bind:group={selected} id={`${id}-${field.value}`} {name} value={field.value}>
+      <span>{field.label}</span>
+    </label>
   {/each}
 </fieldset>

@@ -22,28 +22,24 @@
     <button class="gesvelte-btn" on:click={() => customForm.addField('Radio')}>Add Radio</button>
   </div>
 </Modal> -->
-
+<main>
 <SlidingPanel id="556">
 	<div class="ges-row flex direction-column flex-items-center">
-		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Checkbox')}
-			>Add Checkbox</button
-		>
-		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Radio')}
-			>Add Radio</button
-		>
+		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Checkbox')}>Add Checkbox</button>
+		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Radio')}>Add Radio</button>
+		<button class="gesvelte-btn rounded" on:click={() => customForm.addField('Input')}>Add Input</button>
 		<PropsForm />
 	</div>
 </SlidingPanel>
 
 <div class="container">
 	<div class="ges-row flex direction-column justify-center flex-items-center py80 px40">
+		<h1 class="main-heading mb-30">Customize a New Form</h1>
 		<Panel themeClass="glass-bg" title="New Form" desc="This is where new fields should populate">
 			<form>
-				<!-- {Object.keys($customForm)} -->
 				{#each Object.values($customForm) as element}
 					<!-- TODO: Create component interface/type to properly type values of customForm -->
 					<svelte:component this={element.component} {...element.props} />
-					<!-- <svelte:component this={element.component} fields={element.fields} /> -->
 				{/each}
 			</form>
 		</Panel>
@@ -55,4 +51,6 @@
 <div class="container" style="display:none;">
 	<CodeView />
 </div>
+
+</main>
 <!-- Container -->

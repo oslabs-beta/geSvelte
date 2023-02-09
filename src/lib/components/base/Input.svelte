@@ -1,14 +1,25 @@
-<script>
-	//@ts-nocheck
-	import Icon from '@iconify/svelte';
+<!--
+  Input.svelte
+  Base level component representing a text inputs using HTML5 inputs
+  TODO: update data to be more inline with base data shape
+  params:
+    placeholder: light text prompt in field when value is empty 
+    labelClass: classes used with atomic CSS selectors
+    inputType: textInputs 
+    labelText: Label/directive/prompt for user
+    id: id for input element
+    name: reference on submitted data
+-->
+<script lang="ts">
+	import type { textInputs } from '$lib/types';
 
-	// base components will be in a form wrapper, enforce inheritance
-	// export let props;
-	export let placeholder, labelClass, labelText, inputType, inputId, inputName;
-	// label for property will always match name/id
-	// const { labelClass, labelText, inputType, inputId, inputName } = props;
+	export let placeholder: string = 'Default placeholder';
+	export let labelClass: string = '';
+	export let labelText: string = 'Default label';
+	export let inputType: textInputs = 'text';
+	export let id: number = -1;
+	export let name: string = '';
 </script>
 
-<label class={labelClass} for={inputName}>{labelText}</label>
-
-<input type={inputType} id={inputId} name={inputName} {placeholder} />
+<label class={labelClass} for={name}>{labelText}</label>
+<input type={inputType} id={`${id}`} {name} {placeholder} />
