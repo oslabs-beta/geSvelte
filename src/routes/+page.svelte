@@ -58,7 +58,7 @@
 								<ClockIcon />
 								<h3 class="mb-20">Save Time</h3>
 								<p>
-									GeSvelte includes a <a href="/stage"> no-code form builder</a> and a set of pre-composed
+									GeSvelte includes a <a href="/stage">no-code form builder</a> and a set of pre-composed
 									forms that are ready to use right our of the box, don't waste time writing inputs!
 								</p>
 							</div>
@@ -118,9 +118,8 @@
 				</div>
 				<div class="ges-row">
 					<div
-						class="text-box glass-bg text center flex direction-column text-center text-lg flex-items-center"
-					>
-						<h3 class="mb3 text-lg color-primary lg-shadow mb-20">Why GesVelte?</h3>
+						class="text-box glass-bg text center flex direction-column text-center text-lg flex-items-center">
+						<h3 class="mb3 text-lg color-primary lg-shadow mb-20">Why GeSvelte?</h3>
 						<p class="text-lg">
 							Because with GeSvelte, you can create beautiful and functional forms in a matter of
 							minutes using the power of Svelte. The best part? The program generates the component
