@@ -1,6 +1,6 @@
 <!-- LOGO -->
 <div align='center' >
-    <img style="display: block; margin-top: 20px; margin-bottom: 50px; margin-left: auto; margin-right: auto; max-width: 30%; height: auto;" src="./src/lib/assets/gesvelte-text-logo.png">
+    <img style="display: block; margin-top: 20px; margin-bottom: 50px; margin-left: auto; margin-right: auto; max-height: 100px;" src="./src/lib/assets/gesvelte-text-logo.png" height="80">
 </div>
 
 <!-- README HEADER -->
