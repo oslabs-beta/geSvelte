@@ -42,8 +42,8 @@
 		<div class="ges-row flex direction-row justify-evenly flex-wrap">
 			{#each Object.keys($customForm[$lookup].props) as prop}
 				{#if prop === 'fields'}
+					<div style="width: 100%;">
 					{#each Object.keys($customForm[$lookup].props.fields) as index}
-					<div>
 						{#each Object.keys($customForm[$lookup].props.fields[index]) as component}
 							<!-- {console.log(component)} -->
 							{#if component === 'checked'}
@@ -74,8 +74,8 @@
 								{/if}
 							{/each}
 							<button class="gesvelte-btn" type="button" on:click={() => deleteInput(+index)}>Delete</button>
-					</div>
 					{/each}
+					</div>
 					<button class="gesvelte-btn" type="button" on:click={() => addInput($customForm[$lookup])}>Add</button>
 				{:else}
 					<div>	
