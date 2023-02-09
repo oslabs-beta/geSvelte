@@ -45,6 +45,8 @@ h5,
 h6 {
 	font-size: inherit;
 	font-weight: inherit;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -223,6 +225,7 @@ video {
 }
 body {
 	width: 100vw;
+	min-height: 100vh;
 	font-size: 1.3rem;
 	font-family: 'Fira Sans';
 	margin: 0;
@@ -234,15 +237,6 @@ body {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-}
-
-.accordion-title {
-	display: flex;
-	padding: 2rem 5rem;
-	font-size: 1.8rem;
-	background-color: rgba(255, 255, 255, 0.5);
-	border-radius: 3rem;
-	margin-bottom: 1rem;
 }
 
 /* Utility Classes */
@@ -384,21 +378,6 @@ body {
 }
 
 /*Width*/
-.width-1 {
-	height: 1rem;
-}
-.width-2 {
-	height: 2rem;
-}
-.width-3 {
-	height: 3rem;
-}
-.width-4 {
-	height: 4rem;
-}
-.width-5 {
-	height: 5rem;
-}
 .width-20 {
 	width: 20rem;
 }
@@ -453,26 +432,35 @@ body {
 }
 
 /*Top and Bottom*/
-.mt1 {
-	margin-top: 0.5rem;
-}
-.mb1 {
+.mb-5 {
 	margin-bottom: 0.5rem;
 }
-.mt2 {
-	margin-top: 1rem;
-}
-.mb2 {
+.mb-10 {
 	margin-bottom: 1rem;
 }
-.mt3 {
-	margin-top: 1.5rem;
-}
-.mb3 {
+.mb-15 {
 	margin-bottom: 1.5rem;
 }
-.mb4 {
+.mb-20 {
 	margin-bottom: 2rem;
+}
+.mb-25 {
+	margin-bottom: 2.5rem;
+}
+.mb-30 {
+	margin-bottom: 3rem;
+}
+.mb-35 {
+	margin-bottom: 3.5rem;
+}
+.mb-40 {
+	margin-bottom: 4rem;
+}
+.mb-50 {
+	margin-bottom: 5rem;
+}
+.mb-60 {
+	margin-bottom: 6rem;
 }
 .mt-5 {
 	margin-top: 5px;
@@ -675,7 +663,12 @@ h3.text-lg {
 .text-semibold {
 	font-weight: 600;
 }
-
+.color-primary {
+	color: rgb(252, 50, 239);
+}
+.lg-shadow {
+	text-shadow: 1px 3px 6px rgba(23, 10, 6, 0.45);
+}
 /*Color Styling*/
 .bg-default {
 	background: #fafafa;
@@ -728,13 +721,6 @@ h3 {
 	width: 100%;
 	color: #000;
 }
-.range-slider-value {
-}
-
-.main-nav {
-}
-.main-nav ul {
-}
 .main-nav ul li {
 	display: inline-block;
 	margin-right: 2.5rem;
@@ -743,6 +729,10 @@ h3 {
 	font-size: 1.6rem;
 	color: #fff;
 	letter-spacing: 0.08rem;
+	transition: all 0.3s ease-in-out;
+}
+.main-nav ul li a:hover {
+	border-bottom: 2px solid #da3bcd;
 }
 button.gesvelte-btn {
 	font-family: 'Fira Sans';
@@ -776,11 +766,6 @@ button.gesvelte-btn {
 }
 .gesvelte-btn.btn-xlg {
 	padding: 2rem 4rem;
-}
-
-.main-nav {
-}
-.main-nav ul {
 }
 .main-nav ul li {
 	display: inline-block;
