@@ -15,9 +15,8 @@
 				<nav>
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="/faqs">FAQs</a></li>
 						<li><a href="/stage">Stage</a></li>
-						<li><a href="/docs">Docs</a></li>
+						<li><a href="/https://github.com/oslabs-beta/geSvelte">GitHub</a></li>
 					</ul>
 				</nav>
 			</div>

@@ -1,8 +1,15 @@
 <script lang="ts">
 	import mockup from '$lib/assets/mockup.png';
-	import icon1 from '$lib/assets/Link.png';
-	import hacker from '$lib/assets/HACKER.svg';
+	import UserIcon from '$lib/ui/UserIcon.svelte';
+	import BrushIcon from '$lib/ui/BrushIcon.svelte';
+	import ClockIcon from '$lib/ui/ClockIcon.svelte';
+	import hacker from '$lib/assets/HACKER.png';
 	import svelteLogo from '$lib/assets/svelte-logo.png';
+	import boy from '$lib/assets/BOY.png';
+	import cowboy from '$lib/assets/COWBOY.png';
+	import gnome from '$lib/assets/GNOME.png';
+	import mafia from '$lib/assets/MAFIA.png';
+	import exclamation from '$lib/assets/Exclamation-Mark.png';
 </script>
 
 <div class="container">
@@ -28,52 +35,53 @@
 					/>
 				</svg>
 			</div>
-			<!-- <div class="big-logo">
-				<img src={logoMark} alt="main-site-logo" />
-			</div> -->
 			<img class="mockup" src={mockup} alt="main-site-logo" />
 		</div>
 	</section>
 	<section class="main-content">
 		<div class="container section-1">
 			<div class="ges-row py80">
+				<div
+					class="text-box glass-bg text-center flex direction-column justify-center flex-items-center full-width"
+				>
+					<img class="small-icon mb-10" src={exclamation} alt="exclamation-point" />
+					<p class="text-lg">
+						GeSvelte is very much a work in progress. Many future improvements are on the way. There
+						will be breaking changes!
+					</p>
+				</div>
+			</div>
+			<div class="ges-row py80">
 				<div class="site-features flex">
 					<div class="col-one-third p-all5">
 						<div class="feature-box glass-bg text-center">
-							<span class="icon mb4">
-								<img src={icon1} alt="Link Icon" />
-							</span>
-							<h3 class="mb3">Lorem Ipsum</h3>
+							<UserIcon />
+							<h3 class="mb-20">A11Y Ready</h3>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								Accessibility has never been more important. Using accessible forms in your
+								applications is a must, so we have tested all of our form elements for A11Y
+								compliance
 							</p>
 						</div>
 					</div>
 					<div class="col-one-third p-all5">
 						<div class="feature-box glass-bg text-center">
-							<span class="icon mb4">
-								<img src={icon1} alt="Link Icon" />
-							</span>
-							<h3 class="mb3">Lorem Ipsum</h3>
+							<BrushIcon />
+							<h3 class="mb-20">Forms With Style</h3>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								Who says forms have to be boring? GeSvelte will provide a library of pre-styled
+								forms for you right out of the box. Want to do your own styling? That's an option as
+								well.
 							</p>
 						</div>
 					</div>
 					<div class="col-one-third p-all5">
 						<div class="feature-box glass-bg text-center">
-							<span class="icon mb4">
-								<img src={icon1} alt="Link Icon" />
-							</span>
-							<h3 class="mb3">Lorem Ipsum</h3>
+							<ClockIcon />
+							<h3 class="mb-20">Save Time</h3>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								GeSvelte includes a <a href="/stage"> no-code form builder</a> and a set of pre-composed
+								forms that are ready to use right our of the box, don't waste time writing inputs!
 							</p>
 						</div>
 					</div>
@@ -87,13 +95,10 @@
 				<div class="col-5 col-gap">
 					<figure class="dev-box glass-bg flex direction-column flex-items-center text-center">
 						<div class="image-token mb3">
-							<img src={hacker} alt="Avatar" />
+							<img src={gnome} alt="Avatar" />
 						</div>
 						<h3 class="mb3">Christian Ashley</h3>
-						<p>
-							Lorem ipsum dolor sit amet, per etiam omnes omittam ne. Id putant minimum perpetua
-							sea.
-						</p>
+						<span>Software Engineer</span>
 					</figure>
 				</div>
 				<div class="col-5 col-gap">
@@ -102,46 +107,34 @@
 							<img src={hacker} alt="Avatar" />
 						</div>
 						<h3 class="mb3">Ksenia Salova</h3>
-						<p>
-							Lorem ipsum dolor sit amet, per etiam omnes omittam ne. Id putant minimum perpetua
-							sea.
-						</p>
+						<span>Software Engineer</span>
 					</figure>
 				</div>
 				<div class="col-5 col-gap">
 					<figure class="dev-box glass-bg flex direction-column flex-items-center text-center">
 						<div class="image-token mb3">
-							<img src={hacker} alt="Avatar" />
+							<img src={boy} alt="Avatar" />
 						</div>
 						<h3 class="mb3">Stefan Jordan</h3>
-						<p>
-							Lorem ipsum dolor sit amet, per etiam omnes omittam ne. Id putant minimum perpetua
-							sea.
-						</p>
+						<span>Software Engineer</span>
 					</figure>
 				</div>
 				<div class="col-5 col-gap">
 					<figure class="dev-box glass-bg flex direction-column flex-items-center text-center">
 						<div class="image-token mb3">
-							<img src={hacker} alt="Avatar" />
+							<img src={cowboy} alt="Avatar" />
 						</div>
 						<h3 class="mb3">Johnny Howell</h3>
-						<p>
-							Lorem ipsum dolor sit amet, per etiam omnes omittam ne. Id putant minimum perpetua
-							sea.
-						</p>
+						<span>Software Engineer</span>
 					</figure>
 				</div>
 				<div class="col-5 col-gap">
 					<figure class="dev-box glass-bg flex direction-column flex-items-center text-center">
 						<div class="image-token mb3">
-							<img src={hacker} alt="Avatar" />
+							<img src={mafia} alt="Avatar" />
 						</div>
-						<h3 class="mb3">Some other dude</h3>
-						<p>
-							Lorem ipsum dolor sit amet, per etiam omnes omittam ne. Id putant minimum perpetua
-							sea.
-						</p>
+						<h3 class="mb3">Umair Shafiq</h3>
+						<span>Software Engineer</span>
 					</figure>
 				</div>
 			</div>
@@ -149,15 +142,14 @@
 				<div
 					class="text-box glass-bg text center flex direction-column text-center text-lg flex-items-center"
 				>
-					<h3 class="mb3 text-lg">Why GesVelte?</h3>
+					<h3 class="mb3 text-lg color-primary lg-shadow mb-20">Why GesVelte?</h3>
 					<p class="text-lg">
-						Ea splendide aliquando duo, ut pri iisque dissentias. Ex epicuri constituto pro, doctus
-						platonem constituto sed ei. Eu cum option electram, pro modus inermis adversarium ne.
-						Sint falli conclusionemque et eos. Vix at quando essent sanctus, splendide conceptam ius
-						in, te omnium assentior sed. Ea facer assum diceret sea, ex vix duis viris. Idque
-						nonumes pericula qui in.
+						Because with GeSvelte, you can create beautiful and functional forms in a matter of
+						minutes using the power of Svelte. The best part? The program generates the component
+						code for you, so you can simply copy and paste it into your own code, and render the
+						form with ease. Say goodbye to hours spent coding forms from scratch, and hello to more
+						time for creativity and innovation.
 					</p>
-					<p />
 				</div>
 			</div>
 		</div>
@@ -166,6 +158,11 @@
 <slot />
 
 <style lang="scss">
+	.small-icon {
+		display: inline-flex;
+		height: 8rem;
+		width: 8rem;
+	}
 	.hero-text {
 		position: absolute;
 		top: 10vh;
@@ -228,7 +225,7 @@
 		z-index: 10;
 		bottom: 20%;
 		left: 50%;
-		height: 80rem;
+		height: 65vh;
 		transform: translateX(-50%);
 		transition: all 0.2s ease;
 	}
@@ -242,6 +239,9 @@
 		transition: all 0.8s ease;
 		transform: scale(1);
 		border: 3px solid rgba(97, 20, 108, 0.5);
+	}
+	.feature-box a {
+		color: rgba(255, 0, 255);
 	}
 	.feature-box p {
 		font-size: 1.6rem;
@@ -266,5 +266,18 @@
 		padding: 4rem 6rem;
 		color: rgba(255, 255, 255, 0.6);
 		border: 3px solid rgba(97, 20, 108, 0.5);
+	}
+	@media (min-width: 1024px) {
+		.mockup {
+			bottom: 30%;
+			height: 60vh;
+		}
+		.hero-text {
+			top: 10vh;
+
+			h1 {
+				font-size: 6rem;
+			}
+		}
 	}
 </style>
