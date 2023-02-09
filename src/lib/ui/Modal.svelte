@@ -47,26 +47,30 @@
 			{#each Object.keys($customForm[$lookup].props) as prop}
 				{#if prop === 'fields'}
 					{#each Object.keys($customForm[$lookup].props.fields) as index}
-					<div>
-						{#each Object.keys($customForm[$lookup].props.fields[index]) as component}
-							<input
-								type="text"
-								placeholder="Field Name"
-								bind:value={$customForm[$lookup].props.fields[index][component]}
-							/>
+						<div>
+							{#each Object.keys($customForm[$lookup].props.fields[index]) as component}
+								<input
+									type="text"
+									placeholder="Field Name"
+									bind:value={$customForm[$lookup].props.fields[index][component]}
+								/>
 							{/each}
-							<button class="gesvelte-btn" type="button" on:click={() => deleteInput(+index)}>Delete</button>
-					</div>
+							<button class="gesvelte-btn" type="button" on:click={() => deleteInput(+index)}
+								>Delete</button
+							>
+						</div>
 					{/each}
-					<button class="gesvelte-btn" type="button" on:click={() => addInput($customForm[$lookup])}>Add</button>
+					<button class="gesvelte-btn" type="button" on:click={() => addInput($customForm[$lookup])}
+						>Add</button
+					>
 				{:else}
-					<div>	
+					<div>
 						<h4>{prop.toUpperCase()}:</h4>
-							<input
-								type="text"
-								placeholder="Field Value"
-								bind:value={$customForm[$lookup].props[prop]}
-							/>
+						<input
+							type="text"
+							placeholder="Field Value"
+							bind:value={$customForm[$lookup].props[prop]}
+						/>
 					</div>
 				{/if}
 			{/each}

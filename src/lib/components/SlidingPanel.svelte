@@ -10,7 +10,6 @@
 
 	function close() {
 		const el: FlyoutSettings = { id, open: true };
-		console.log('Open');
 		flyoutStore.close();
 	}
 </script>
