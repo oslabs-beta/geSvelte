@@ -48,6 +48,7 @@
 							<!-- {console.log(component)} -->
 							{#if component === 'checked'}
 								<input 
+                  class="created-input"
 									id={`${$lookup}-${index}-${component}`}
 									name={`${$lookup}-${index}-${component}`}
 									type="checkbox" 
