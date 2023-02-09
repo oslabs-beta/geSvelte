@@ -223,13 +223,7 @@ video {
 * {
 	box-sizing: border-box;
 }
-body {
-	width: 100vw;
-	min-height: 100vh;
-	font-size: 1.3rem;
-	font-family: 'Fira Sans';
-	margin: 0;
-}
+
 .container {
 	width: 100%;
 }
