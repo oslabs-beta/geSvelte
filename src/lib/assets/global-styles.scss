@@ -144,3 +144,37 @@ label {
 		background: rgba(218, 59, 205, 0.6);
 	}
 }
+
+.p-hover {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	text-align: center;
+
+	&::before {
+		content: 'Edit Form Field:';
+		margin-bottom: 0.8rem;
+		text-transform: uppercase;
+	}
+
+	p {
+		padding: 0.8rem 1.2rem;
+		border: 1px solid rgba(255, 255, 255, 0.8);
+		border-radius: 0.4rem;
+		margin-bottom: 1rem;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+
+	button {
+		padding: 0.8rem 1.2rem;
+		background: $accent-alpha;
+		border: 1px solid rgba(0, 0, 0, 0.25);
+		border-radius: 0.4rem;
+		margin-bottom: 1rem;
+	}
+}
+.created-input {
+	margin-right: 1.5rem;
+}

@@ -267,17 +267,11 @@ body {
 .justify-evenly {
 	justify-content: space-evenly;
 }
-.direction-row {
-	flex-direction: row;
-}
 .direction-column {
 	flex-direction: column;
 }
 .direction-row {
 	flex-direction: row;
-}
-.direction-column {
-	flex-direction: column;
 }
 .grid {
 	display: grid;
@@ -430,7 +424,6 @@ body {
 .mr3 {
 	margin-right: 1.5rem;
 }
-
 /*Top and Bottom*/
 .mb-5 {
 	margin-bottom: 0.5rem;
@@ -874,6 +867,24 @@ label.active {
 	cursor: pointer;
 	color: rgba(255, 255, 255, 0.75);
 }
+.hide-on-desktop {
+	visibility: hidden;
+	height: 0;
+}
+.main-heading {
+	font-size: 4.8rem;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.7);
+}
+.animatedEl {
+	opacity: 0;
+	transform: translateY(10rem);
+	transition: all 0.5s ease-in;
+}
+.fadeIn {
+	opacity: 1;
+	transform: transalteY(0px);
+}
 /* @media (min-width: 1536px) {
 	.container {
 		max-width: 1536px;
@@ -889,14 +900,92 @@ label.active {
 		max-width: 1024px;
 	}
 }
-@media (min-width: 768px) {
+*/
+@media only screen and (max-width: 768px) {
+	.hide-on-desktop {
+		visibility: visible;
+		height: auto;
+	}
 	.container {
+		width: 100%;
 		max-width: 768px;
+	}
+	[class*='col-'] {
+		width: 100%;
+	}
+	.flex {
+		flex-wrap: wrap;
+	}
+	.direction-row {
+		flex-direction: column;
+	}
+	.dev-box {
+		margin-bottom: 4rem;
+	}
+	.developers {
+		background: none !important;
+		height: auto !important;
+	}
+	.hide-on-mobile {
+		display: none;
+	}
+	.hero-area {
+		height: auto !important;
+	}
+	.section-1 {
+		margin-top: 2rem;
+	}
+	.section-1.s-y_bCXRrkrYfP.s-y_bCXRrkrYfP {
+		margin-top: 2rem !important;
 	}
 }
 
-@media (min-width: 640px) {
+@media only screen and (max-width: 640px) {
 	.container {
+		width: 100%;
 		max-width: 640px;
 	}
-} */
+	.flex {
+		flex-wrap: wrap;
+	}
+	.direction-row {
+		flex-direction: column;
+	}
+
+	/* .col-1,
+	.col-2,
+	.col-3,
+	.col-4,
+	.col-5,
+	.col-6,
+	.col-one-fourth,
+	.col-three-fourths,
+	.col-one-third,
+	.col-two-thirds,
+	.col-one-fifth,
+	.col-two-fifths,
+	.col-three-fifths,
+	.col-four-fifths {
+		width: 100%;
+	} */
+	/*Sometimes we want to hide a DOM element but still want it in the DOM */
+	.element-0 {
+		height: 0px;
+		width: 0px;
+	}
+	.ges-row {
+		max-width: 100%;
+		padding: 2rem;
+	}
+	.col {
+		margin-bottom: 30px;
+	}
+	/* .col-1,
+	.col-2,
+	.col-3,
+	.col-4,
+	.col-5,
+	.col-6 {
+		width: 100%;
+	} */
+}

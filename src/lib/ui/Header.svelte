@@ -1,4 +1,5 @@
 <script>
+	import { onMount } from 'svelte';
 	import '$lib/assets/global-styles.scss';
 	import '$lib/assets/styles.css';
 	import toolbarLogo from '$lib/assets/gesvelte-text-logo.png';
@@ -9,7 +10,7 @@
 	<div class="container">
 		<div class="full-row flex direction-row flex-items-center justify-between height-100">
 			<div class="toolbar-logo">
-				<a href='/'><img src={toolbarLogo} alt="toolbar-logo-img" /></a>
+				<a href="/"><img src={toolbarLogo} alt="toolbar-logo-img" /></a>
 			</div>
 			<div class="main-nav">
 				<nav>

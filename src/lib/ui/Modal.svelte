@@ -78,13 +78,13 @@
 					</div>
 					<button class="gesvelte-btn" type="button" on:click={() => addInput($customForm[$lookup])}>Add</button>
 				{:else}
-					<div>	
+					<div>
 						<h4>{prop.toUpperCase()}:</h4>
-							<input
-								type="text"
-								placeholder="Field Value"
-								bind:value={$customForm[$lookup].props[prop]}
-							/>
+						<input
+							type="text"
+							placeholder="Field Value"
+							bind:value={$customForm[$lookup].props[prop]}
+						/>
 					</div>
 				{/if}
 			{/each}
