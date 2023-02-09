@@ -6,14 +6,15 @@
 
 <a name="readme-top"></a>
 
-Simplify form building for your website or web application with **geSvelte** - a custom form builder and npm library for Svelte developers powered by SvelteKit.
-**geSvelte** offers a live preview [... here goes a one-sentence description of key features].
+Simplify form building for your website or web application with [geSvelte](http://gesvelte.io) - a custom form builder and npm package for Svelte developers powered by SvelteKit.
+[geSvelte](http://gesvelte.io) offers a simple, easy to use, and intuitive Svelte form-building interface with live preview, and an accompanying npm package to acceses the Svelte form components.
 
-As a product built under the open-source tech accelerator OS Labs, **geSvelte** is continuously growing and improving to better serve the needs of developers.
+As a product built under the open-source tech accelerator OS Labs, [geSvelte](http://gesvelte.io) is continuously growing and improving to better serve the needs of developers.
 
 <!-- TABLE OF CONTENTS -->
 
-<summary>Table of Contents</summary>
+### Table of Contents
+
 <ol>
   <li>
     <a href="#about-the-project">About The Project</a>
@@ -22,7 +23,7 @@ As a product built under the open-source tech accelerator OS Labs, **geSvelte** 
       <li><a href="#features">Features</a></li>
     </ul>
   </li>
-  <li><a href="#setup">Setup</a></li>
+  <li><a href="#using-gesvelte">Setup</a></li>
   <li><a href="#future-release-plans">Future Release Plans</a></li>
   <li><a href="#contributing">Contributing</a></li>
   <li><a href="#authors">Authors</a></li>
@@ -42,31 +43,34 @@ As a product built under the open-source tech accelerator OS Labs, **geSvelte** 
 
 ### Features
 
-Feature 1
-[img]
-
-Feature 2
-[img]
+- Custom no-code Svelte form creation interface with live form preview
+- Built-in form field validation
+- Accessibility-tested form components
+- Live component code preview that lets you copy and paste the form code direclty into your applicaiton
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SETUP -->
+<!-- USING -->
 
-## Setup
+## Using geSvelte
 
-Clone the repo:
+You can take advantage of everything that geSvelte has to offer if you visit [geSvelte.io](http://gesvelte.io/stage).
+
+However, if you'd like to run the application directly from your machine, follow the steps below:
+
+1. Fork and then clone the repo:
 
 ```
 git clone https://github.com/oslabs-beta/geSvelte.git
 ```
 
-Install dependencies:
+2. Install dependencies:
 
 ```
 npm install
 ```
 
-To start the app:
+3. To start the app:
 
 ```
 npm run dev
@@ -78,8 +82,15 @@ npm run dev
 
 ## Future Release Plans
 
-- [...one]
-- [...two]
+Features currently in development:
+
+- npm package to access the form components
+- Completed documentation
+- More style themes available
+- More pre-composed form options available (dropdown, etc)
+- Multi-step forms
+
+Upcoming release: TBD
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
