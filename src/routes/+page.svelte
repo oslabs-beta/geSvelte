@@ -38,7 +38,7 @@
 								<p>
 									Accessibility has never been more important. Using accessible forms in your
 									applications is a must, so we have tested all of our form elements for A11Y
-									compliance
+									compliance.
 								</p>
 							</div>
 						</div>
@@ -120,7 +120,7 @@
 					<div
 						class="text-box glass-bg text center flex direction-column text-center text-lg flex-items-center"
 					>
-						<h3 class="mb3 text-lg color-primary lg-shadow mb-20">Why GesVelte?</h3>
+						<h3 class="mb3 text-lg color-primary lg-shadow mb-20">Why GeSvelte?</h3>
 						<p class="text-lg">
 							Because with GeSvelte, you can create beautiful and functional forms in a matter of
 							minutes using the power of Svelte. The best part? The program generates the component

@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	import '$lib/assets/global-styles.scss';
 	import '$lib/assets/styles.css';
 	import toolbarLogo from '$lib/assets/gesvelte-text-logo.png';
@@ -17,7 +16,7 @@
 					<ul>
 						<li><a href="/">Home</a></li>
 						<li><a href="/stage">Stage</a></li>
-						<li><a href="/https://github.com/oslabs-beta/geSvelte">GitHub</a></li>
+						<li><a href="https://github.com/oslabs-beta/geSvelte">GitHub</a></li>
 					</ul>
 				</nav>
 			</div>
