@@ -1,12 +1,18 @@
+<!-- LOGO -->
+<div align='center' >
+    <img style="display: block; margin-top: 30px; margin-bottom: 40px; margin-left: auto; margin-right: auto; max-height: 100px;" src="./src/lib/assets/gesvelte-text-logo.png" height="80">
+</div>
+
 <!-- README HEADER -->
 
 # geSvelte
 
+![Website Status](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fwww.gesvelte.io)
 ![Github Repo Size](https://img.shields.io/github/repo-size/oslabs-beta/geSvelte) ![GitHub License](https://img.shields.io/github/license/oslabs-beta/geSvelte) ![GitHub PR](https://img.shields.io/badge/PRs-welcome-orange) ![GitHub Commit](https://img.shields.io/github/last-commit/oslabs-beta/geSvelte) ![GitHub Stars](https://img.shields.io/github/stars/oslabs-beta/geSvelte)
 
 <a name="readme-top"></a>
 
-Simplify form building for your website or web application with [geSvelte](http://gesvelte.io) - a custom form builder and npm package for Svelte developers powered by SvelteKit.
+Simplify form building for your website or web application with [geSvelte](http://gesvelte.io) - a custom form builder for Svelte developers powered by SvelteKit.
 [geSvelte](http://gesvelte.io) offers a simple, easy to use, and intuitive Svelte form-building interface with live preview, and an accompanying npm package to acceses the Svelte form components.
 
 As a product built under the open-source tech accelerator OS Labs, [geSvelte](http://gesvelte.io) is continuously growing and improving to better serve the needs of developers.
@@ -23,7 +29,7 @@ As a product built under the open-source tech accelerator OS Labs, [geSvelte](ht
       <li><a href="#features">Features</a></li>
     </ul>
   </li>
-  <li><a href="#using-gesvelte">Setup</a></li>
+  <li><a href="#using-gesvelte">Using geSvelte</a></li>
   <li><a href="#future-release-plans">Future Release Plans</a></li>
   <li><a href="#contributing">Contributing</a></li>
   <li><a href="#authors">Authors</a></li>
@@ -37,7 +43,7 @@ As a product built under the open-source tech accelerator OS Labs, [geSvelte](ht
 
 ### Built With
 
-[![Svelte][Svelte.dev]][Svelte-url] [![Vite][Vite.js]][Vite-url] [![Sass][Sass]][Sass-url]
+[![Svelte][Svelte.dev]][Svelte-url] [![Vite][Vite.js]][Vite-url] [![Sass][Sass]][Sass-url] [![TypeScript][TypeScript]][TypeScript-url]
 
 <!-- Typescript/Javascript, Vite, SvelteKit, Scss -->
 
@@ -54,9 +60,9 @@ As a product built under the open-source tech accelerator OS Labs, [geSvelte](ht
 
 ## Using geSvelte
 
-You can take advantage of everything that geSvelte has to offer if you visit [geSvelte.io](http://gesvelte.io/stage).
+You can take advantage of everything that geSvelte has to offer if you visit [gesvelte.io](http://gesvelte.io/stage).
 
-However, if you'd like to run the application directly from your machine, follow the steps below:
+However, if you'd like to run the application directly from your machine, follow these steps:
 
 1. Fork and then clone the repo:
 
@@ -70,7 +76,7 @@ git clone https://github.com/oslabs-beta/geSvelte.git
 npm install
 ```
 
-3. To start the app:
+3. Start the app:
 
 ```
 npm run dev
@@ -145,3 +151,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [Vite.js]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
 [Sass-url]: https://sass-lang.com
 [Sass]: https://img.shields.io/badge/-Sass-CC6699?logo=sass&logoColor=white&style=for-the-badge
+[TypeScript]: https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=FFFFFF
+[TypeScript-url]: https://www.typescriptlang.org
