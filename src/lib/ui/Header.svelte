@@ -9,14 +9,14 @@
 	<div class="container">
 		<div class="full-row flex direction-row flex-items-center justify-between height-100">
 			<div class="toolbar-logo">
-				<a href='/'><img src={toolbarLogo} alt="toolbar-logo-img" /></a>
+				<a href="/"><img src={toolbarLogo} alt="toolbar-logo-img" /></a>
 			</div>
 			<div class="main-nav">
 				<nav>
 					<ul>
 						<li><a href="/">Home</a></li>
 						<li><a href="/stage">Stage</a></li>
-						<li><a href="/https://github.com/oslabs-beta/geSvelte">GitHub</a></li>
+						<li><a href="https://github.com/oslabs-beta/geSvelte">GitHub</a></li>
 					</ul>
 				</nav>
 			</div>
