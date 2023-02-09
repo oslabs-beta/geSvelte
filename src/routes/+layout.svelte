@@ -1,22 +1,9 @@
-<script lang="ts">
-	import { onMount } from 'svelte';
-
-	let ready: boolean = false;
-	onMount(() => (ready = true));
+<script>
+	import Header from '$lib/ui/Header.svelte';
+	import Footer from '$lib/ui/Footer.svelte';
 </script>
 
-<div class="dragbar" />
+<Header />
+<slot />
 
-{#if ready}
-	<slot />
-{/if}
-
-<style>
-	.dragbar {
-		-webkit-app-region: drag;
-		position: absolute;
-		z-index: 100;
-		height: 40px;
-		width: 100%;
-	}
-</style>
+<Footer />
