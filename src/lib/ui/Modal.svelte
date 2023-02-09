@@ -66,6 +66,7 @@
 									<label for={`${$lookup}-${index}-${component}`}>Checked by Default</label>
 							{:else}
 								<input
+									class="mr3"
 									type="text"
 									placeholder="Field Name"
 									bind:value={$customForm[$lookup].props.fields[index][component]}
