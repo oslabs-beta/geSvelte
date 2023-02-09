@@ -61,7 +61,8 @@ function createCustomForm() {
         return updatedState;
       })
     },
-    set
+    set,
+    update
   }
 }
 
