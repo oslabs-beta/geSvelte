@@ -11,10 +11,12 @@
 	import mafia from '$lib/assets/MAFIA.png';
 	import exclamation from '$lib/assets/Exclamation-Mark.png';
 	import * as gesvelte from 'gesvelte';
+	import { Input } from 'gesvelte';
 </script>
 
 <main>
 	<svelte:component this={gesvelte.Input} />
+	<Input />
 	<div class="container">
 		<DesktopHero />
 		<MobileHero />
