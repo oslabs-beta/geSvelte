@@ -10,9 +10,11 @@
 	import gnome from '$lib/assets/GNOME.png';
 	import mafia from '$lib/assets/MAFIA.png';
 	import exclamation from '$lib/assets/Exclamation-Mark.png';
+	import * as gesvelte from 'gesvelte';
 </script>
 
 <main>
+	<svelte:component this={gesvelte.Input} />
 	<div class="container">
 		<DesktopHero />
 		<MobileHero />
